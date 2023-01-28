@@ -6,7 +6,7 @@ Becvold forum is a classic forum with a minimum of javascript designed overall f
  - Set web root to web dir public/
  - Disable apache autoindex
  - Run install script
-next_install_instruction
+ * next_install_instruction
 
 ## DEV PLAN
 - [X] Basic structure
