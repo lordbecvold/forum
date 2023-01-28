@@ -20,8 +20,8 @@ next_install_instruction
 - [ ] Post list structure (post list by forum category)
 - [ ] Post system (share, like, comment = for logged users)
 - [ ] Highlight links in post (only for logged users)
-- [ ] Admin system (edit forum category, delete / move posts, delete comments, ban / mute / change rank for users)
 - [ ] Test & fix CSS responsivity
+- [ ] Admin system (edit forum category, delete posts, delete comments, ban / mute / rank change for users)
 - [ ] Code clean
 - [ ] Penetration testing
 
