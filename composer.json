@@ -1,0 +1,11 @@
+{
+    "name": "becvar/becwork",
+    "type": "project",
+    "description": "The Becwork Framework.",
+    "keywords": ["framework", "Becwork"],
+    "license": "MIT",
+    "require": {
+        "php": "^7.3|^8.0",
+        "filp/whoops": "^2.14"
+    }
+}
