@@ -19,7 +19,7 @@ Becvold forum is a classic forum with a minimum of javascript designed overall f
 - [ ] Logout system
 - [ ] Rank system (admin, developer, vip, user)
 - [ ] Post list structure (post list by forum category)
-- [ ] Post system (share, like, comment = for logged users)
+- [ ] Post system allow post image (share, like, comment = for logged users)
 - [ ] Highlight links in post (only for logged users)
 - [ ] Test & fix CSS responsivity
 - [ ] Admin system (edit forum category, delete posts, delete comments, ban / mute / rank change for users)
