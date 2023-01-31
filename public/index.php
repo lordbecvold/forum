@@ -103,7 +103,12 @@
 			
 		// include main page file
 		else {
-			include_once("../site/Main.php");
+			if ($mysqlUtils->isOffline()) {
+				header("location: ErrorHandlerer.php?code=400");
+			} else {
+
+				include_once("../site/Main.php");
+			}
 		}
 	}
 ?>
