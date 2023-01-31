@@ -1,5 +1,3 @@
-<main>
-    <center>
-        <h3 class="title"><strong>forum</strong></h3>
-    </center>
+<main class="container">
+    <h1>1 test</h1>
 </main>
