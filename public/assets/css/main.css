@@ -35,7 +35,8 @@ body {
 
 .container {
 	position: absolute;
-	border: 0.1px solid #5c646b;
+	border-left: 0.1px solid #5c646b;
+	border-right: 0.1px solid #5c646b;
 	height: 100%;
 	width: 100%;
 }
@@ -52,7 +53,7 @@ body {
 
 /* USER BAR */
 .user-bar {
-	padding-top: 4px;
+	padding-top: 5px;
 	padding-bottom: 4px;
 	border-bottom: 1px solid #5c646b;
 	height: 30px;
@@ -91,7 +92,7 @@ body {
 /* PHONE CSS */
 @media only screen and (max-width: 768px) {
 	.user-bar {
-		padding-top: 1px;
+		padding-top: 1.2px;
 		height: 24px;
 	}
 	.welcome-header {
