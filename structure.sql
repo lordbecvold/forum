@@ -7,8 +7,8 @@ SET sql_mode = 'NO_AUTO_VALUE_ON_ZERO';
 
 SET NAMES utf8mb4;
 
-CREATE DATABASE `bec_forum` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
-USE `bec_forum`;
+CREATE DATABASE `forum` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
+USE `forum`;
 
 DROP TABLE IF EXISTS `logs`;
 CREATE TABLE `logs` (

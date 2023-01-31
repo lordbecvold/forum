@@ -7,7 +7,7 @@
 		public $config = [
 
 			/* Main config */
-			"appName"     => "BecForum",			 //Define app name
+			"appName"     => "Forum",			 //Define app name
 			"version"     => 1.0,                  	 //Define app version
 			"author"      => "Lukáš Bečvář",       	 //Define app author
 			"authorLink"  => "https://becvold.xyz/", //Define author site
@@ -21,7 +21,7 @@
 
 			/*	Mysql config	*/
 			"ip" 		=> 	"localhost", 	//Define mysql server ip
-			"basedb" 	=> 	"bec_forum",  	//Define mysql default db name
+			"basedb" 	=> 	"forum",  	//Define mysql default db name
 			"username"	=> 	"root", 		//Define mysql user 
 			"password" 	=> 	"root"			//Define Mysql password
 		];
