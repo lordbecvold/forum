@@ -1,8 +1,10 @@
-<?php //This is the main class to include all active controllers in the application
+<?php // this is the main class to include all active controllers in the application
     
-    //Require all controlers
+    // require all controlers
     require_once(__DIR__."/controllers/SiteController.php");
+    require_once(__DIR__."/controllers/UserController.php");
     
-    //Init controllers instances
-    $siteController =  new becwork\controller\SiteController();
+    // init controllers instances
+    $siteController = new becwork\controller\SiteController();
+    $userController = new becwork\controller\UserController();
 ?>

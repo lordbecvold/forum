@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
 	<link rel="icon" href="assets/img/favicon.png" type="image/x-icon"/>
 	<link href="assets/css/main.css" rel="stylesheet">
+	<link href="assets/fontawesome/fontawesome.min.css" rel="stylesheet">
 	<title>Forum</title>
 </head>
 <body>

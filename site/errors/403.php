@@ -12,7 +12,7 @@
 </head>
 <body class="mainPage">
 	<main>
-		<center><h3 class="errorPageMSG"><strong>You do not have permission to access this page<br><br><br><br><br></strong></h3></center>
+		<center><h3 class="errorPageMSG"><strong>You do not have permission to access this page<br><br><br><br><br><br></strong></h3></center>
 		<center><h3 class="errorPageMSG"><strong>Please check the address bar or contact your administrator</strong></h3></center>
 	</main>
 </body>

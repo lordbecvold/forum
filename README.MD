@@ -34,6 +34,9 @@ This project requires PHP8 or < .
 * Whoops
    * Version: **2.14.4**
    * [Github](https://github.com/filp/whoops)
+* Font-awesome
+   * Version: **5.8.1 - FREE**
+   * [Website](https://fontawesome.com)
 
 ## License
 The framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
