@@ -7,10 +7,21 @@
 	<title>Forum</title>
 </head>
 <body>
-	<main>
-		<center>
-			<h3 class="title"><strong>forum</strong></h3>
-		</center>
-	</main>
+	<?php // main site public/admin component redirect
+
+		// get admin process (if used)
+		$adminProcess = $siteController->getQueryString("admin");
+
+		// check if admin process used
+		if ($adminProcess != null) {
+			
+			// use admin system component
+			include_once("admin/AdminMain.php");
+		} else {
+
+			// use main (public) site component
+			include_once("components/MainComponent.php");
+		}
+	?>
 </body>
 </html>

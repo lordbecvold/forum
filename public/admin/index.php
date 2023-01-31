@@ -1,5 +1,3 @@
-<?php 
-
-    echo "REDIRECT TO ADMIN";
-
+<?php // redirect to admin page
+	header("location: ../?admin=login");
 ?>
