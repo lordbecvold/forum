@@ -82,6 +82,33 @@ body {
 	color: rgb(255, 255, 255);
 }
 
+/* NAVIGATION BAR */
+.navigation-bar {
+	padding-top: 5px;
+	padding-bottom: 4px;
+	border-bottom: 1px solid #5c646b;
+	height: 40px;
+	background-color: rgb(53, 56, 59);
+}
+
+.nav-link {
+	color: rgb(137, 137, 243);
+	text-decoration: none;
+	font-size: 25px;
+	margin-left: 3px;
+	margin-right: 3px;
+}
+
+.nav-link:hover {
+	color: rgb(245, 62, 62);
+	text-decoration: underline;
+}
+
+/* NAVIGATION SEARCH FORM */
+.nav-search-form {
+	margin-right: 4px;
+}
+
 /* LARGE DESKTOPS CSS */
 @media only screen and (min-width: 2048px) {
 	.container {
@@ -100,5 +127,11 @@ body {
 	}
 	.user-bar-link {
 		font-size: 12px;
+	}
+	.nav-link {
+		font-size: 22px;
+	}
+	.navigation-bar {
+		height: 33px;
 	}
 }
