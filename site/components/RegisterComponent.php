@@ -66,12 +66,12 @@
                 } else {
                     
                     // check if username used
-                    if ($userController->isUserRegistred($userName)) {
+                    if ($registerController->isUserRegistred($userName)) {
                         $alertController->errorAlert($userName . " is used");
                     } 
 
                     // check if email used
-                    elseif ($userController->isEmailRegistred($email)) {
+                    elseif ($registerController->isEmailRegistred($email)) {
                         $alertController->errorAlert($email . " is registred");
                     } 
                     
@@ -79,7 +79,7 @@
                     else {
 
                         // insert new user
-                        $userController->registerUser($userName, $email, $password);
+                        $registerController->registerUser($userName, $email, $password);
                     
                         // redirect to OK status (registred successful msg)
                         header("location: ?process=register&status=ok");
