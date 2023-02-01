@@ -15,6 +15,7 @@ Becvold forum is a classic forum with a minimum of javascript designed overall f
 - [X] Login system
 - [X] Logout system
 - [X] User system
+- [ ] Favicon path in config file
 - [ ] Rank system (owner, admin, developer, vip, user)
 - [ ] Default page structure with forum category
 - [ ] Load forum category from mysql table
