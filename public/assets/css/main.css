@@ -6,7 +6,6 @@
     font-family: Arial, Helvetica, sans-serif;
 } 
 
-
 /* SCROOL BAR */
 ::-webkit-scrollbar { 
 	width: 10px;
@@ -65,7 +64,7 @@ body {
 /* ALERT STYLE */
 .alert {
 	position: relative;
-	max-width: 20%;
+	max-width: 30%;
 	text-align: center;
 	border: 1px solid #5c646b;
 	background-color: rgb(53, 56, 59);
@@ -117,6 +116,11 @@ body {
 .user-bar-link:hover {
 	background-color: rgb(20, 20, 20);
 	color: rgb(255, 255, 255);
+}
+
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active {
+	font-size: 18px;
+    -webkit-box-shadow: 0 0 0px 1000px rgb(41, 41, 41) inset !important;
 }
 
 
