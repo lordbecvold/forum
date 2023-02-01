@@ -1,5 +1,9 @@
-<?php 
+<main class="container">
+<?php // user login component
 
-    echo "login";
+    // import main user bar
+    include_once("elements/UserBar.php");
 
+    // LOGIN SYSTEM
 ?>
+</div>

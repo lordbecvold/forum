@@ -27,11 +27,21 @@
                 if ($userController->isUserLogged()) {
                     echo '<a href="#" class="user-bar-link">Logout</a>';
                 } else {
-                    echo '<a href="?process=login" class="user-bar-link">Login</a>';
                     
+                    // get process name
                     $process = $siteController->getQueryString("process");
 
+                    // check if process is not login
+                    if ($process != "login") {
+
+                        // add login button to user bar
+                        echo '<a href="?process=login" class="user-bar-link">Login</a>';
+                    }
+
+                    // check if process is not register
                     if ($process != "register") {
+
+                        // add register button to user bar
                         echo '<a href="?process=register" class="user-bar-link">Register</a>';
                     }
                 }

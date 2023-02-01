@@ -99,6 +99,7 @@ body {
 .welcome-header {
 	font-size: 18px;	
 	color: white;	
+	margin-left: 3px;
 }
 
 .user-bar-link {
@@ -195,6 +196,9 @@ body {
 	}
 	.navigation-bar {
 		height: 33px;
+	}
+	.nav-link-small {
+		font-size: 13px;
 	}
 	.alert {
 		margin-top: 0;
