@@ -11,13 +11,13 @@ Becvold forum is a classic forum with a minimum of javascript designed overall f
 
 ## DEV PLAN
 - [X] Basic structure
+- [X] Register system
+- [X] Login system
+- [X] Logout system
 - [ ] SQL structure
 - [ ] User system
 - [ ] Default page structure with forum category
 - [ ] Load forum category from mysql table
-- [ ] Register system
-- [ ] Login system
-- [ ] Logout system
 - [ ] Rank system (admin, developer, vip, user)
 - [ ] Post list structure (post list by forum category)
 - [ ] Post system allow post image (share, like, comment = for logged users)

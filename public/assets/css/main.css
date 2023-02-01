@@ -126,10 +126,10 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 
 /* NAVIGATION BAR */
 .navigation-bar {
-	padding-top: 5px;
+	padding-top: 3px;
 	padding-bottom: 4px;
 	border-bottom: 1px solid #5c646b;
-	height: 40px;
+	height: 38px;
 	background-color: rgb(53, 56, 59);
 }
 

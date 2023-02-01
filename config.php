@@ -19,6 +19,10 @@
 			/* Page config */
 			"maintenance" => false,	//Define maintenance status
 
+			/* Cookie values */
+			"loginCookie"   => "4h6rR2L0ZSWY7kfGX5f7lQvvvi5xVP52",	// login cookie name
+			"loginValue"    => "rF5LLtGUj9TPu626yqjP8U6z84k2dWVy",	// value of login cookie
+
 			/*	Mysql config	*/
 			"ip" 		=> 	"localhost", 	//Define mysql server ip
 			"basedb" 	=> 	"forum",  	//Define mysql default db name

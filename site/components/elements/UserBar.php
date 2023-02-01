@@ -25,7 +25,7 @@
             <?php 
                 // check if user logged in
                 if ($userController->isUserLogged()) {
-                    echo '<a href="#" class="user-bar-link">Logout</a>';
+                    echo '<a href="?process=logout" class="user-bar-link">Logout</a>';
                 } else {
                     
                     // get process name

@@ -32,6 +32,16 @@
 			include_once("components/LoginComponent.php");
 		}
 
+		// check if process used (logout)
+		elseif ($process == "logout") {
+
+			// logout user
+			if ($userController->isUserLogged()) {
+				$loginController->logout();
+			} else {
+				header("location: ErrorHandlerer.php?code=404");
+			}
+		}
 
 		// check if process used (register)
 		elseif ($process == "register") {
