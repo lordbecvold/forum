@@ -12,6 +12,7 @@ Becvold forum is a classic forum with a minimum of javascript designed overall f
 ## DEV PLAN
 - [X] Basic structure
 - [ ] SQL structure
+- [ ] User system
 - [ ] Default page structure with forum category
 - [ ] Load forum category from mysql table
 - [ ] Register system
