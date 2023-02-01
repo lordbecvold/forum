@@ -62,6 +62,67 @@
 			$sessionUtils->setSession("userToken", $token);
 		}
     
+		// set login cookie
+		public function setLoginCookies($token) {
+
+			global $cookieUtils;
+			global $pageConfig;
+
+			// set username cookie for next auth
+			$cookieUtils->cookieSet("userToken", $token, time() + (60*60*24*7*365));
+
+			// set token cookie for next login
+			$cookieUtils->cookieSet($pageConfig->getValueByName("loginCookie"), $pageConfig->getValueByName("loginValue"), time() + (60*60*24*7*365));			
+		}
+
+		// unset login cookie
+		public function unSetLoginCookies() {
+
+			global $cookieUtils;
+			global $pageConfig;
+
+			// unset login key cookie
+			$cookieUtils->unset_cookie($pageConfig->getValueByName("loginCookie"));
+
+			// unset token
+			$cookieUtils->unset_cookie("userToken");			
+		}
+
+		// auto user login (for cookie login)
+		public function autoLogin() {
+			
+			global $sessionUtils;
+			global $mysqlUtils;
+			global $urlUtils;
+			global $pageConfig;
+			global $mainUtils;
+			global $userController;
+
+			// get user token
+			$userToken = $_COOKIE["userToken"];
+
+			// get user ip
+			$userIP = $mainUtils->getRemoteAdress();
+
+			// start session
+			$sessionUtils->sessionStartedCheckWithStart();
+
+			// set login identify session
+			$sessionUtils->setSession($pageConfig->getValueByName('loginCookie'), $_COOKIE[$pageConfig->getValueByName('loginCookie')]);
+ 
+			// set token session
+			$sessionUtils->setSession("userToken", $userToken);
+
+			// log action to mysql
+			$mysqlUtils->logToMysql("Success login", "user ".$userController->getUserName()." success login by login cookie");
+
+			// update user ip
+			$mysqlUtils->insertQuery("UPDATE users SET remote_addr='$userIP' WHERE token='$userToken'");
+
+			// refresh page
+			$urlUtils->redirect("/");
+		}
+
 		// logout user
 		public function logout() {
 

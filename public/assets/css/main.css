@@ -60,6 +60,10 @@ body {
 	margin-bottom: 8px;
 }
 
+.margin-top-8 {
+	margin-top: 8px;
+}
+
 
 /* ALERT STYLE */
 .alert {
@@ -101,28 +105,6 @@ body {
 	margin-left: 3px;
 }
 
-.user-bar-link {
-	font-size: 18px;
-	background-color: rgb(41, 41, 41);
-	border: 1px solid rgb(150, 150, 150);
-	color: white;
-	text-decoration: none;
-	padding: 4px;
-	margin-left: -0px;
-	padding-left: 5px;
-	padding-right: 6px;
-}
-
-.user-bar-link:hover {
-	background-color: rgb(20, 20, 20);
-	color: rgb(255, 255, 255);
-}
-
-input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active {
-	font-size: 18px;
-    -webkit-box-shadow: 0 0 0px 1000px rgb(41, 41, 41) inset !important;
-}
-
 
 /* NAVIGATION BAR */
 .navigation-bar {
@@ -156,6 +138,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 	margin-right: 4px;
 }
 
+
 /* FROM STYLE */
 .form {
 	position: absolute;
@@ -175,6 +158,44 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 }
 
 
+/* INPUTS STYLE */
+.user-input-field {
+	font-size: 18px;
+	background-color: rgb(41, 41, 41);
+	border: 1px solid rgb(150, 150, 150);
+	color: white;
+	text-decoration: none;
+	padding: 4px;
+	margin-left: -0px;
+	padding-left: 5px;
+	padding-right: 6px;
+}
+
+.user-input-field:hover {
+	background-color: rgb(20, 20, 20);
+	color: rgb(255, 255, 255);
+}
+
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active {
+	font-size: 18px;
+    -webkit-box-shadow: 0 0 0px 1000px rgb(41, 41, 41) inset !important;
+}
+
+.check-box {
+	border: 2px solid rgba(255, 255, 255, 0.24);
+	background: rgba(180, 38, 38, 0.062);
+	position: relative;
+	width: 25px;
+	height: 20px;
+	top: 4px;
+}
+
+.check-box-text {
+	color: white;
+	font-family: arial;
+	font-size: 20px;
+}
+
 /* LARGE DESKTOPS CSS */
 @media only screen and (min-width: 2048px) {
 	.container {
@@ -192,7 +213,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 	.welcome-header {
 		font-size: 12px;
 	}
-	.user-bar-link {
+	.user-input-field {
 		font-size: 12px;
 	}
 	.nav-link {

@@ -47,6 +47,15 @@
 
                             // login user
                             $loginController->login($email);
+
+                            // save account (Remember me function)
+                            if (isset($_POST["save-account"])) {
+                                
+                                $loginController->setLoginCookies($userController->getUserToken());
+                            } else {
+                                $loginController->unSetLoginCookies();
+                            }
+
                         } else {
                             $alertController->errorAlert("Incorrect username or password.");
                         }

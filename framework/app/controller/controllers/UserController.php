@@ -74,15 +74,26 @@
         // get user role
         public function getUserRole() {
 
-            // check if user logged
-            if ($this->isUserLogged()) {
+			global $mysqlUtils;
+			global $pageConfig;
 
-                $role = "role_name where token: ".$this->getUserToken();
-            } else {
-                $role = null;
-            }
+			// get token count
+			$count = mysqli_fetch_assoc(mysqli_query($mysqlUtils->mysqlConnect($pageConfig->getValueByName('basedb')), "SELECT COUNT(*) AS count FROM users WHERE token='".$this->getUserToken()."'"))["count"];
+				
+			// check if token exist in users
+			if ($count == "1") {
 
-            return $role;
+				// check if user token is null
+				if ($this->getUserToken() != NULL) {
+
+					// return user role by token
+					return $mysqlUtils->readFromMysql("SELECT role FROM users WHERE token = '".$this->getUserToken()."'", "role");
+				} else {
+					return NULL;
+				}
+			} else {
+				return NULL;
+			}
         }
     }
 ?>

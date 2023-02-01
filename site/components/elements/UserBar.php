@@ -15,7 +15,7 @@
 
                 // check if user logged in
                 if ($userController->isUserLogged()) {
-                    echo " <span class='welcome-header'>Welcome: [". $userController->getUserName()."]</span>";
+                    echo " <span class='welcome-header'>Welcome: [". $userController->getUserName()." - (".$userController->getUserRole().")]</span>";
                 } else {
                     echo " <span class='welcome-header'>Welcome on ". $pageConfig->getValueByName('appName')."</span>";
                 }
@@ -25,7 +25,7 @@
             <?php 
                 // check if user logged in
                 if ($userController->isUserLogged()) {
-                    echo '<a href="?process=logout" class="user-bar-link">Logout</a>';
+                    echo '<a href="?process=logout" class="user-input-field">Logout</a>';
                 } else {
                     
                     // get process name
@@ -35,14 +35,14 @@
                     if ($process != "login") {
 
                         // add login button to user bar
-                        echo '<a href="?process=login" class="user-bar-link">Login</a>';
+                        echo '<a href="?process=login" class="user-input-field">Login</a>';
                     }
 
                     // check if process is not register
                     if ($process != "register") {
 
                         // add register button to user bar
-                        echo '<a href="?process=register" class="user-bar-link">Register</a>';
+                        echo '<a href="?process=register" class="user-input-field">Register</a>';
                     }
                 }
             ?>

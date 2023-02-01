@@ -11,6 +11,26 @@
 <body>
 	<?php // main site public/admin component redirect
 
+		// AUTO LOGIN /////////////////////////////////////////////////////////
+		if ($userController->isUserLogged() == false) {
+
+			// check if cookie used
+			if (isset($_COOKIE[$pageConfig->getValueByName('loginCookie')]) and isset($_COOKIE["userToken"])) {
+            
+				// auto login if user have token cookie
+				if (isset($_COOKIE[$pageConfig->getValueByName('loginCookie')]) and isset($_COOKIE["userToken"])) {
+	
+					// check if token valid
+					if ($_COOKIE[$pageConfig->getValueByName('loginCookie')] == $pageConfig->getValueByName('loginValue')) {
+	
+						// auto user login
+						$loginController->autoLogin();
+					}
+				}				
+			}
+		}
+		///////////////////////////////////////////////////////////////////////
+
 		// get admin process (if used)
 		$adminProcess = $siteController->getQueryString("admin");
 
