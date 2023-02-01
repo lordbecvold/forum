@@ -14,12 +14,35 @@
 		// get admin process (if used)
 		$adminProcess = $siteController->getQueryString("admin");
 
+		// get pocess value (if used)
+		$process = $siteController->getQueryString("process");
+
 		// check if admin process used
 		if ($adminProcess != null) {
 			
 			// use admin system component
 			include_once("admin/AdminMain.php");
-		} else {
+		} 
+		
+		
+		// check if process used (login)
+		elseif ($process == "login") {
+
+			// use login component
+			include_once("components/LoginComponent.php");
+		}
+
+
+		// check if process used (register)
+		elseif ($process == "register") {
+
+			// use registr component
+			include_once("components/RegisterComponent.php");
+		}
+
+
+		// main default component
+		else {
 
 			// use main (public) site component
 			include_once("components/MainComponent.php");

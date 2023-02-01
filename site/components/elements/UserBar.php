@@ -16,8 +16,8 @@
                 if ($userController->isUserLogged()) {
                     echo '<a href="#" class="user-bar-link">Logout</a>';
                 } else {
-                    echo '<a href="#" class="user-bar-link">Login</a>';
-                    echo '<a href="#" class="user-bar-link">Register</a>';
+                    echo '<a href="?process=login" class="user-bar-link">Login</a>';
+                    echo '<a href="?process=register" class="user-bar-link">Register</a>';
                 }
             ?>
         </span>
