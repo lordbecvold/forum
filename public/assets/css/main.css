@@ -220,6 +220,57 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 	font-size: 20px;
 }
 
+
+/* FORUM BOARD */
+.forum-board {
+	border: 1px solid #5c646b;
+	background-color: rgb(53, 56, 59);
+}
+
+.forum-category {
+	border-bottom: 1px solid #5c646b;
+}
+
+.forum-title {
+	color: white;
+	font-size: 20px;
+	font-weight: bold;
+	border-bottom: 1px solid #5c646b;
+	background-color: rgb(52, 52, 90);
+}
+
+.forum-line {
+	position: relative;
+	width: 100%;
+}
+
+.forum-link {
+	margin-left: 1px;
+	color: rgb(114, 114, 255);
+	text-decoration: none;
+	position: relative;
+	top: 0px;
+}
+
+.forum-link:hover {
+	color: rgb(253, 75, 75);
+	text-decoration: underline;
+}
+
+.posts-count {
+	margin-right: 5px;
+	color: white;
+}
+
+.category-desc {
+	margin-left: 3px;
+	font-size: 16px;
+	color: white;
+	position: relative;
+	top: 0px;
+}
+
+
 /* LARGE DESKTOPS CSS */
 @media only screen and (min-width: 2048px) {
 	.container {
@@ -231,20 +282,22 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 /* PHONE CSS */
 @media only screen and (max-width: 768px) {
 	.user-bar {
-		padding-top: 1.25px;
-		height: 24.3px;
+		padding-top: 1px;
+		height: 21px;
 	}
 	.welcome-header {
 		font-size: 12px;
 	}
 	.user-input-field {
 		font-size: 12px;
+		max-width: 100px;
+		padding: 2px;
 	}
 	.nav-link {
-		font-size: 22px;
+		font-size: 20px;
 	}
 	.navigation-bar {
-		height: 31px;
+		height: 27px;
 	}
 	.nav-link-small {
 		font-size: 13px;
@@ -255,5 +308,19 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 	}
 	.alert-text {
 		font-size: 15px;
+	}
+	.forum-title {
+		font-size: 13px;
+	}
+	.forum-link {
+		font-size: 10px;
+		top: -4px;
+	}
+	.posts-count {
+		font-size: 10px;
+	}
+	.category-desc {
+		font-size: 10px;
+		top: -5px;
 	}
 }
