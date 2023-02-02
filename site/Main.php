@@ -3,8 +3,12 @@
 <head>
 	<meta charset="utf-8">
 	<meta content="width=device-width, initial-scale=1.0" name="viewport">
-	<link rel="icon" href="assets/img/favicon.png" type="image/x-icon"/>
 	<link href="assets/css/main.css" rel="stylesheet">
+
+	<?php // add favicon to app
+		echo '<link rel="icon" href="assets/'.$pageConfig->getValueByName("favicon_path").'" type="image/x-icon"/>';
+	?>
+
 	<link href="assets/fontawesome/fontawesome.min.css" rel="stylesheet">
 	<title><?php echo $pageConfig->getValueByName('appName'); ?></title>
 </head>
@@ -44,7 +48,6 @@
 			include_once("admin/AdminMain.php");
 		} 
 		
-		
 		// check if process used (login)
 		elseif ($process == "login") {
 
@@ -69,7 +72,6 @@
 			// use registr component
 			include_once("components/RegisterComponent.php");
 		}
-
 
 		// main default component
 		else {
