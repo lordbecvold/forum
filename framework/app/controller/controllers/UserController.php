@@ -86,8 +86,25 @@
 				// check if user token is null
 				if ($this->getUserToken() != NULL) {
 
-					// return user role by token
-					return $mysqlUtils->readFromMysql("SELECT role FROM users WHERE token = '".$this->getUserToken()."'", "role");
+					// get user role from database
+					$userRole = $mysqlUtils->readFromMysql("SELECT role FROM users WHERE token = '".$this->getUserToken()."'", "role");
+					 
+					// get user role output
+					if (strtolower(($userRole)) == "owner") {
+						$role = "Owner";
+					} elseif (strtolower($userRole) == "admin") {
+						$role = "Admin";
+					} elseif (strtolower($userRole) == "developer") {
+						$role = "Developer";
+					} elseif (strtolower($userRole) == "vip") {
+						$role = "VIP";
+					} else {
+						$role = "User";
+					}
+				
+					// final role output
+					return $role;
+					
 				} else {
 					return NULL;
 				}
