@@ -271,6 +271,32 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 }
 
 
+/* FOOTER */
+.footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	border: 1px solid #5c646b;
+	text-align: right;
+	background-color: rgb(52, 52, 90);
+}
+
+.footer-text {
+	padding: 2px;
+	margin-right: 3px;
+}
+
+.author-link {
+	color: white;
+	text-decoration: none;
+}
+
+.author-link:hover {
+	color: rgb(247, 105, 105);
+	text-decoration: underline;
+}
+
+
 /* LARGE DESKTOPS CSS */
 @media only screen and (min-width: 2048px) {
 	.container {

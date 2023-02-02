@@ -8,5 +8,8 @@
 
         // import forum board
         include_once("BoardComponent.php");
+
+        // import page footer
+        include_once("elements/Footer.php");
     ?>
 </main>
