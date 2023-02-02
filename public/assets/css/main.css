@@ -65,7 +65,7 @@ body {
 }
 
 .color-red {
-	color: rgb(245, 85, 85);
+	color: rgb(255, 105, 105);
 }
 
 .color-green {
@@ -148,6 +148,14 @@ body {
 	font-size: 18px;
 }
 
+.admin-link {
+	color: rgb(245, 62, 62);
+}
+
+.admin-link:hover {
+	color: rgb(57, 241, 33);
+}
+
 
 /* NAVIGATION SEARCH FORM */
 .nav-search-form {
@@ -223,8 +231,8 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 /* PHONE CSS */
 @media only screen and (max-width: 768px) {
 	.user-bar {
-		padding-top: 1.2px;
-		height: 24px;
+		padding-top: 1.25px;
+		height: 24.3px;
 	}
 	.welcome-header {
 		font-size: 12px;
@@ -236,7 +244,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 		font-size: 22px;
 	}
 	.navigation-bar {
-		height: 33px;
+		height: 31px;
 	}
 	.nav-link-small {
 		font-size: 13px;

@@ -5,5 +5,8 @@
 
         // import navigation panel
         include_once("elements/Navigation.php");
+
+        // import forum board
+        include_once("BoardComponent.php");
     ?>
 </main>

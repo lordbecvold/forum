@@ -44,8 +44,21 @@
 		// check if admin process used
 		if ($adminProcess != null) {
 			
-			// use admin system component
-			include_once("admin/AdminMain.php");
+			// check if user logged in
+			if ($userController->isUserLogged()) {
+
+				// check if user admin
+				if (($userController->getUserRole() == "Owner") || ($userController->getUserRole() == "Admin")) {
+
+					// use admin system component
+					include_once("admin/AdminMain.php");
+				} else {
+					header("location: ErrorHandlerer.php?code=403");
+				}
+			} else {
+				header("location: ErrorHandlerer.php?code=404");
+			}
+
 		} 
 		
 		// check if process used (login)
