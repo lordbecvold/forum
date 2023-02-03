@@ -94,6 +94,7 @@ body {
 
 .basic-link:hover {
 	color: rgb(255, 97, 97);
+	text-decoration: underline;
 }
 
 
@@ -294,6 +295,16 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 	padding: 2px;
 }
 
+.sort-panel {
+	margin-right: 3px;
+}
+
+.sort-text {
+	color: white;
+	font-size: 16px;
+	font-weight: bold;
+}
+
 
 /* FOOTER */
 .footer {
@@ -384,6 +395,9 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 	}
 	.sub-panel {
 		padding: 0;
+	}
+	.sort-text {
+		font-size: 12px;
 	}
 	.form-title {
 		font-size: 15px;
