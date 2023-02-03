@@ -51,6 +51,8 @@
 
 			global $sessionUtils;
 			global $pageConfig;
+			global $userController;
+			global $mysqlUtils;
 
 			// start session
 			$sessionUtils->sessionStartedCheckWithStart();
@@ -60,6 +62,12 @@
 
 			// set token session
 			$sessionUtils->setSession("userToken", $token);
+
+			// save role to session
+			$sessionUtils->setSession("role", $userController->getUserRole());
+
+			// log action to mysql
+			$mysqlUtils->logToMysql("Success login", "user ".$userController->getUserName()." success login");
 		}
     
 		// set login cookie
@@ -112,6 +120,9 @@
  
 			// set token session
 			$sessionUtils->setSession("userToken", $userToken);
+
+			// save role to session
+			$sessionUtils->setSession("role", $userController->getUserRole());
 
 			// log action to mysql
 			$mysqlUtils->logToMysql("Success login", "user ".$userController->getUserName()." success login by login cookie");

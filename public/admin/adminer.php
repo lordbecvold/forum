@@ -17,6 +17,19 @@
     // check if user logged in
     if (!isset($_SESSION[$session]) || !($_SESSION[$session] == $session_value)) {
         die("'<script type='text/javascript'>window.location.replace('/ErrorHandlerer.php?code=403');</script>'");
+    } else {
+
+        // check if role seted
+        if (isset($_SESSION["role"])) {
+            
+            // check if user not admin
+            if (($_SESSION["role"] != "Owner") && ($_SESSION["role"] != "Admin")) {
+                die("'<script type='text/javascript'>window.location.replace('/ErrorHandlerer.php?code=403');</script>'");
+            }
+
+        } else {
+            die("'<script type='text/javascript'>window.location.replace('/ErrorHandlerer.php?code=403');</script>'");
+        }
     }
 ?>
 
