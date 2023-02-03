@@ -6,6 +6,7 @@
     require_once(__DIR__."/controllers/AlertController.php");
     require_once(__DIR__."/controllers/RegisterController.php");
     require_once(__DIR__."/controllers/LoginController.php");
+    require_once(__DIR__."/controllers/BoardController.php");
     
     // init controllers instances
     $siteController = new becwork\controller\SiteController();
@@ -13,4 +14,5 @@
     $alertController = new becwork\controller\AlertController();
     $registerController = new becwork\controller\RegisterController();
     $loginController = new becwork\controller\LoginController();
+    $boardController = new becwork\controller\BoardController();
 ?>
