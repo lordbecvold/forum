@@ -5,7 +5,7 @@
             if ($userController->isUserLogged()) {
 
                 // check if user admin
-                if (($userController->getUserRole() == "Owner") || ($userController->getUserRole() == "Admin")) {
+                if ($userController->checkIsUserAdmin()) {
 
                     // add admin link
                     echo '<a class="nav-link admin-link" href="?admin=dashboard"><i class="fas fa-cog"></i></a>';

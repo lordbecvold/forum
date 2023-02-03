@@ -112,5 +112,28 @@
 				return NULL;
 			}
         }
+
+		// check if user is admin
+		public function checkIsUserAdmin() {
+
+			// check if user logged in
+			if ($this->isUserLogged()) {
+
+				// check if user admin
+				if (($this->getUserRole() == "Owner") || ($this->getUserRole() == "Admin")) {
+					$output = true;
+			
+				} else {
+					$output = false;
+				}
+
+			} else {
+			
+				$output = false;
+			}
+
+			// return final output
+			return $output;
+		}
     }
 ?>
