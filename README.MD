@@ -9,6 +9,12 @@ Becvold forum is a classic forum with a minimum of javascript designed overall f
 - Insert database structure to mysql
 * next_install_instruction
 
+## Config
+* config_instruction
+
+## Theme
+* custom_theme_file_desc
+
 ## DEV PLAN
 - [X] Basic structure
 - [X] Register system
