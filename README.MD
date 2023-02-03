@@ -19,13 +19,18 @@ Becvold forum is a classic forum with a minimum of javascript designed overall f
 - [X] Favicon path in config file
 - [X] Default page structure with forum category
 - [X] Load forum category from mysql table
+- [ ] sub navigation in forum browser (new post, show own posts)
 - [ ] Post list structure (post list by forum category)
-- [ ] Post system allow post image (share, like, comment = for logged users)
-- [ ] Visitors counter system
+- [ ] Post list sort (by created, by update)
+- [ ] Post system allow post image
+- [ ] Comment and share post (only for logged users) (comment = update last post update)
+- [ ] Like posts (for logged users)
 - [ ] Highlight links in post (only for logged users)
-- [ ] Search system
+- [ ] Post editor (for admin & post owner)
+- [ ] Search system (where post name)
 - [ ] Test & fix CSS responsivity
 - [ ] Admin system (edit forum category, delete posts, delete comments, ban / mute / rank change for users)
+- [ ] CSS Colors in separate file (theme.css)
 - [ ] Code clean
 - [ ] Penetration testing
 
