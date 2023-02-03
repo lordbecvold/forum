@@ -30,6 +30,9 @@ Becvold forum is a classic forum with a minimum of javascript designed overall f
 
 ## Dependencies
 This project requires PHP8 or < .
+* Adminer
+   * Version: **4.8.1**
+   * [Website](https://www.adminer.org/)
 * Whoops
    * Becwork: **2.0**
    * [Github](https://github.com/lordbecvold/becwork)
