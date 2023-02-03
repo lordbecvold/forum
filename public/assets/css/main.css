@@ -28,7 +28,7 @@
 
 /* COMMONS */
 body {
-    background: #292e33;
+    background-color: rgb(40, 40, 43);
 	display: flex;
 	justify-content: center;
 	height: 100vh;
@@ -87,7 +87,7 @@ body {
 	max-width: 30%;
 	text-align: center;
 	border: 1px solid #5c646b;
-	background-color: rgb(53, 56, 59);
+	background-color: rgb(40, 40, 43);
 	margin-top: 10px;
 }
 
@@ -112,7 +112,7 @@ body {
 	padding-bottom: 4px;
 	border-bottom: 1px solid #5c646b;
 	height: 30px;
-	background-color: rgb(53, 56, 59);
+	background-color: rgb(40, 40, 43);
 }
 
 .welcome-header {
@@ -128,7 +128,7 @@ body {
 	padding-bottom: 4px;
 	border-bottom: 1px solid #5c646b;
 	height: 38px;
-	background-color: rgb(53, 56, 59);
+	background-color: rgb(40, 40, 43);
 }
 
 .nav-link {
