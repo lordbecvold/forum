@@ -8,7 +8,7 @@
                 if ($userController->checkIsUserAdmin()) {
 
                     // add admin link
-                    echo '<a class="nav-link admin-link width-limiter" href="?admin=dashboard"><i class="fas fa-cog"></i></a>';
+                    echo '<a class="nav-link admin-link width-limiter-100" href="?admin=dashboard"><i class="fas fa-cog"></i></a>';
                 }
             }
         ?>    

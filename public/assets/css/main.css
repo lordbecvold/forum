@@ -84,6 +84,18 @@ body {
 	color: white;
 }
 
+.basic-link {
+	color: rgb(148, 148, 255);
+	text-decoration: none;
+	margin-left: 2px;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.basic-link:hover {
+	color: rgb(255, 97, 97);
+}
+
 
 /* ALERT STYLE */
 .alert {
@@ -275,6 +287,14 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 }
 
 
+/* FORUM BROWSE */
+.sub-panel {
+	border-bottom: 1px solid #5c646b;
+	background-color: rgb(53, 56, 59);
+	padding: 2px;
+}
+
+
 /* FOOTER */
 .footer {
 	position: fixed;
@@ -322,8 +342,12 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 		font-size: 12px;
 		padding: 2px;
 	}
-	.width-limiter {
+	.width-limiter-100 {
 		max-width: 100px;
+	}
+	.width-limiter-150 {
+		max-width: 150px;
+		min-width: 150px;
 	}
 	.nav-link {
 		font-size: 20px;
@@ -354,5 +378,26 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 	.category-desc {
 		font-size: 10px;
 		top: -5px;
+	}
+	.basic-link {
+		font-size: 12px;
+	}
+	.sub-panel {
+		padding: 0;
+	}
+	.form-title {
+		font-size: 15px;
+	}
+	.check-box-text {
+		font-size: 12px;
+	}
+	.check-box {
+		width: 13px;
+		height: 20px;
+		top: 6.5px;
+	}
+	input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active {
+		font-size: 10px;
+		color: white;
 	}
 }
