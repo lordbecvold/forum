@@ -31,10 +31,10 @@
                     echo '
                         <p class="forum-category">
                             <div class="forum-line">
-                                <a class="forum-link" href="?forum='.$forum["name"].'">'.$forum["name"].'</a>
-                                <span class="right posts-count">posts: 35</span>
+                                <i class="fas fa-dot-circle"></i>  <a class="forum-link" href="?forum='.$forum["name"].'">'.$forum["name"].'</a>
+                                <span class="right posts-count">posts: ('.$boardController->getPostsCountByForum($forum["name"]).')</span>
                             </div>
-                            <p class="category-desc"><i class="fas fa-dot-circle"></i> '.$forum["description"].'</p>
+                            <p class="category-desc">'.$forum["description"].'</p>
                         </p>
                     ';
                 }

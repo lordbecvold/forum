@@ -80,6 +80,10 @@ body {
 	color: rgb(81, 81, 241);
 }
 
+.color-white {
+	color: white;
+}
+
 
 /* ALERT STYLE */
 .alert {
@@ -263,7 +267,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 }
 
 .category-desc {
-	margin-left: 3px;
+	margin-left: 20px;
 	font-size: 16px;
 	color: white;
 	position: relative;
@@ -308,7 +312,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 /* PHONE CSS */
 @media only screen and (max-width: 768px) {
 	.user-bar {
-		padding-top: 1px;
+		padding-top: 0px;
 		height: 21px;
 	}
 	.welcome-header {
@@ -316,8 +320,10 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 	}
 	.user-input-field {
 		font-size: 12px;
-		max-width: 100px;
 		padding: 2px;
+	}
+	.width-limiter {
+		max-width: 100px;
 	}
 	.nav-link {
 		font-size: 20px;

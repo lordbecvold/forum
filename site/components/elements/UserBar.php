@@ -56,7 +56,7 @@
             <?php 
                 // check if user logged in
                 if ($userController->isUserLogged()) {
-                    echo '<a href="?process=logout" class="user-input-field">Logout</a>';
+                    echo '<a href="?process=logout" class="user-input-field width-limiter">Logout</a>';
                 } else {
                     
                     // get process name
@@ -66,14 +66,14 @@
                     if ($process != "login") {
 
                         // add login button to user bar
-                        echo '<a href="?process=login" class="user-input-field">Login</a>';
+                        echo '<a href="?process=login" class="user-input-field width-limiter">Login</a>';
                     }
 
                     // check if process is not register
                     if ($process != "register") {
 
                         // add register button to user bar
-                        echo '<a href="?process=register" class="user-input-field">Register</a>';
+                        echo '<a href="?process=register" class="user-input-field width-limiter">Register</a>';
                     }
                 }
             ?>

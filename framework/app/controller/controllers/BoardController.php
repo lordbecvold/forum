@@ -40,5 +40,11 @@
 
             return $forums;
         }
+
+        // get forum posts count (where forum name)
+        public function getPostsCountByForum($forum) {
+
+            return 0;
+        }
     }
 ?>
