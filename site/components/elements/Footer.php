@@ -1,3 +1,4 @@
+<br><br>
 <div class="footer">
     <p class="footer-text">
         <?php 
