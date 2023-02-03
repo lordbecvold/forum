@@ -26,7 +26,7 @@
                             <a class="forum-link" href="#">'.$forum["name"].'</a>
                             <span class="right posts-count">posts: 35</span>
                         </div>
-                        <p class="category-desc"><i class="fas fa-dot-circle"></i>'.$forum["description"].'</p>
+                        <p class="category-desc"><i class="fas fa-dot-circle"></i> '.$forum["description"].'</p>
                     </p>
                 ';
             }
