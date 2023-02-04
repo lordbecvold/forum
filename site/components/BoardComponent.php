@@ -34,6 +34,7 @@
                                 <i class="fas fa-dot-circle"></i>  <a class="forum-link" href="?forum='.$forum["name"].'">'.$forum["name"].'</a>
                                 <span class="right posts-count">posts: ('.$boardController->getPostsCountByForum($forum["name"]).')</span>
                             </div>
+                            <div class="post-name-line"></div>
                             <p class="category-desc">'.$forum["description"].'</p>
                         </p>
                     ';

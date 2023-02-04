@@ -26,7 +26,7 @@ Becvold forum is a classic forum with a minimum of javascript designed overall f
 - [X] Default page structure with forum category
 - [X] Load forum category from mysql table
 - [X] sub navigation in forum browser (new post, show own posts)
-- [ ] Post list structure (post list by forum category)
+- [X] Post list structure
 - [ ] Post list sort (by created, by update)
 - [ ] Post system allow post image
 - [ ] Comment and share post (only for logged users) (comment = update last post update)

@@ -44,7 +44,9 @@
         // get forum posts count (where forum name)
         public function getPostsCountByForum($forum) {
 
-            return 0;
+            global $postsController;
+
+            return $postsController->getPostsObjectByForum($forum)->num_rows;
         }
     }
 ?>
