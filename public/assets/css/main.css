@@ -361,7 +361,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 
 .post-element {
 	background-color: rgb(53, 56, 59);
-	border-bottom: 1px solid rgb(248, 248, 164);
+	border: 1px solid rgb(131, 131, 131);
 	margin-top: 5px;
 	padding: 5px;
 	border-radius: 5px;
