@@ -46,7 +46,7 @@
 
             global $postsController;
 
-            return $postsController->getPostsObjectByForum($forum)->num_rows;
+            return $postsController->getPostsObjectByForum($forum, null)->num_rows;
         }
     }
 ?>

@@ -3,6 +3,9 @@
     // get forum name (if set)
     $forum = $siteController->getQueryString("forum");   
 
+    // get sort (if set)
+    $sort = $siteController->getQueryString("sort");   
+
     // check if forum seted
     if ($forum != null) {
 
@@ -10,7 +13,7 @@
         include_once("elements/ForumBorwserSubPanel.php");
 
         // check if forum empty
-        if ($postsController->getPostsObjectByForum($forum)->num_rows < 1) {
+        if ($postsController->getPostsObjectByForum($forum, $sort)->num_rows < 1) {
            
             // print empty forum msg
             $alertController->normalAlert($forum . " is empty<br><a href='#' class='basic-link'>create post</a>");
@@ -20,7 +23,7 @@
         else {
 
             // get posts
-            $posts = $postsController->getPostsObjectByForum($forum);
+            $posts = $postsController->getPostsObjectByForum($forum, $sort);
 
             // print form title
             echo '<div class="forum-title margin-bottom-0">'.$forum.'</div>';
@@ -67,8 +70,6 @@
             // end of posts box
             echo '</div>';
         }
-
-        //print_r($postsController->getPostsArrayByForumName("forum 1"));
 
     } else {
 

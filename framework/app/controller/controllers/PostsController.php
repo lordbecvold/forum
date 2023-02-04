@@ -5,7 +5,7 @@
     class PostsController {
 
         // get posts by forum name (use * for all forums)
-        public function getPostsObjectByForum($forum) {
+        public function getPostsObjectByForum($forum, $sort) {
 
             global $mysqlUtils;
             global $pageConfig;
@@ -16,23 +16,32 @@
             // check if forum is all
             if ($forum == "*") {
 
-                // select all posts data
-                $posts = mysqli_query($mysqlUtils->mysqlConnect($pageConfig->getValueByName("basedb")), "SELECT * FROM posts");
+                // check if sort new 
+                if ($sort == "new") {
+
+                    // select data sort by new
+                    $posts = mysqli_query($mysqlUtils->mysqlConnect($pageConfig->getValueByName("basedb")), "SELECT * FROM posts ORDER BY id DESC");
+
+                } else {
+
+                    // select all posts data
+                    $posts = mysqli_query($mysqlUtils->mysqlConnect($pageConfig->getValueByName("basedb")), "SELECT * FROM posts");
+                }
             } else {
                 
-                // select posts data by forum name
-                $posts = mysqli_query($mysqlUtils->mysqlConnect($pageConfig->getValueByName("basedb")), "SELECT * FROM posts WHERE forum = '$forum'");
+                // check if sort new 
+                if ($sort == "new") {
+
+                    // select post data with sort by new
+                    $posts = mysqli_query($mysqlUtils->mysqlConnect($pageConfig->getValueByName("basedb")), "SELECT * FROM posts WHERE forum = '$forum' ORDER BY id DESC");
+
+                } else {
+
+                    // select posts data by forum name
+                    $posts = mysqli_query($mysqlUtils->mysqlConnect($pageConfig->getValueByName("basedb")), "SELECT * FROM posts WHERE forum = '$forum'");
+                }
+
             }
-
-            // return final posts objects
-            return $posts;
-        }
-
-        // get posts associative array by forum name
-        public function getPostsArrayByForumName($forum) {
-
-            // get posts and fetch assoc
-            $posts = mysqli_fetch_assoc($this->getPostsObjectByForum($forum));
 
             // return final posts objects
             return $posts;
