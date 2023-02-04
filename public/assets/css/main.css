@@ -251,6 +251,12 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 	border-radius: 5px;
 }
 
+.forum-category {
+	border: 1px solid #818181;
+	margin: 4px;
+	border-radius: 5px;
+}
+
 .forum-title {
 	color: white;
 	font-size: 20px;
