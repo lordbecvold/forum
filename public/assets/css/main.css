@@ -64,6 +64,10 @@ body {
 	margin-top: 8px;
 }
 
+.margin-top-2 {
+	margin-top: 2px;
+}
+
 .color-red {
 	color: rgb(255, 105, 105);
 }
@@ -287,6 +291,10 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 	top: 0px;
 }
 
+.fa-dot-circle {
+	color: white;
+}
+
 
 /* FORUM BROWSE */
 .sub-panel {
@@ -317,8 +325,9 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 }
 
 .footer-text {
-	padding: 2px;
-	margin-right: 3px;
+	padding: 0px;
+	font-size: 14px;
+	margin-right: 5px;
 }
 
 .author-link {
@@ -329,6 +338,56 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 .author-link:hover {
 	color: rgb(247, 105, 105);
 	text-decoration: underline;
+}
+
+
+/* FORUM READER */
+.post-list {
+	background-color: rgb(53, 56, 59);
+}
+
+.post-element {
+	border-bottom: 1px solid rgb(253, 253, 104);
+	padding: 4px;
+}
+
+.post-element:hover {
+	background-color: rgb(51, 53, 54);
+}
+
+.post-name-line {
+	margin-top: 2px;
+	border-bottom: 1px solid rgb(87, 87, 87);
+}
+
+.post-link {
+	color: rgb(136, 136, 211);
+	font-size: 15px;
+	font-weight: 500;
+	text-decoration: none;
+}
+
+.post-link:hover {
+	color: rgb(96, 252, 96);
+}
+
+.post-desc-date {
+	margin-right: 5px;
+	color: #d6d6d6;
+}
+
+.post-line-text {
+	color: white;
+}
+
+.post-author-link {
+	color: rgb(255, 115, 115);
+	text-decoration: none;
+	font-size: 15px;
+}
+
+.post-author-link:hover {
+	color: rgb(147, 253, 147);
 }
 
 
