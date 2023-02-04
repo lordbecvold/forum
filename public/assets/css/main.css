@@ -378,6 +378,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 
 .post-line-text {
 	color: white;
+	font-size: 15px;
 }
 
 .post-author-link {
@@ -472,5 +473,15 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 	input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active {
 		font-size: 10px;
 		color: white;
+	}
+	.post-link {
+		font-size: 13px;
+	}
+	.post-line-text {
+		font-size: 12px;
+		margin-bottom: 1px;
+	}
+	.post-author-link {
+		font-size: 12px;
 	}
 }
