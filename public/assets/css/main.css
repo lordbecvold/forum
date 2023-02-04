@@ -68,6 +68,10 @@ body {
 	margin-top: 2px;
 }
 
+.margin-bottom-0 {
+	margin-bottom: 0 !important;
+}
+
 .color-red {
 	color: rgb(255, 105, 105);
 }
@@ -99,6 +103,10 @@ body {
 .basic-link:hover {
 	color: rgb(255, 97, 97);
 	text-decoration: underline;
+}
+
+.text-center {
+	text-align: center;
 }
 
 
@@ -269,6 +277,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 	border-bottom: 1px solid #5c646b;
 	background-color: rgb(52, 52, 90);
 	margin-bottom: 5px;
+	padding-left: 3px;
 }
 
 .forum-line {
@@ -355,24 +364,9 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 
 
 /* FORUM READER */
-.post-list {
-	margin: 5px;
-}
-
-.post-element {
-	background-color: rgb(53, 56, 59);
-	border: 1px solid rgb(131, 131, 131);
-	margin-top: 5px;
-	padding: 5px;
-	border-radius: 5px;
-}
-
-.post-element:hover {
-	background-color: rgb(51, 53, 54);
-}
-
 .post-name-line {
-	margin-top: 2px;
+	padding: 0;
+	margin: 0;
 	border-bottom: 1px solid rgb(87, 87, 87);
 }
 
@@ -407,6 +401,21 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 	color: rgb(147, 253, 147);
 }
 
+.post-list table, .post-list th, .post-list td {
+	position: relative;
+	border: 1px solid rgb(131, 131, 131);
+	border-collapse: collapse;
+	padding: 4px;
+	width: 100%;
+}
+
+.post-list th, .post-list td {
+	background-color: rgb(53, 56, 59);
+}
+
+.post-list td:hover {
+	background-color: rgb(51, 53, 54);
+}
 
 /* LARGE DESKTOPS CSS */
 @media only screen and (min-width: 2048px) {
@@ -491,7 +500,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 		color: white;
 	}
 	.post-link {
-		font-size: 13px;
+		font-size: 15px;
 	}
 	.post-line-text {
 		font-size: 12px;
@@ -499,5 +508,11 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 	}
 	.post-author-link {
 		font-size: 12px;
+	}
+	.forum-board .post-name-line {
+		border: none;
+	}
+	.post-desc-date {
+		font-size: 10px;
 	}
 }

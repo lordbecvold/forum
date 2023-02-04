@@ -9,7 +9,6 @@
         <span class="right sort-panel">
             <span class="sort-text">sort by: </span>
             <a class="basic-link" href="#">CREATED</a>
-            <a class="basic-link" href="#">UPDATE</a>
         </span>
     </p>
 </div>

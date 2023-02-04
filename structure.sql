@@ -36,7 +36,6 @@ CREATE TABLE `posts` (
   `author` char(255) CHARACTER SET cp1250 COLLATE cp1250_general_ci NOT NULL,
   `forum` char(255) CHARACTER SET cp1250 COLLATE cp1250_general_ci NOT NULL,
   `created_date` char(255) CHARACTER SET cp1250 COLLATE cp1250_general_ci NOT NULL,
-  `update_date` char(255) CHARACTER SET cp1250 COLLATE cp1250_general_ci NOT NULL,
   `content` longtext CHARACTER SET cp1250 COLLATE cp1250_general_ci NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
@@ -56,4 +55,4 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 
--- 2023-02-04 13:18:09
+-- 2023-02-04 14:17:08
