@@ -51,7 +51,7 @@
                             <a class="post-link" href="#">'.$value["name"].'</a>
                             <div class="post-name-line"></div>
                             <p class="post-line-text">
-                                by <a class="post-author-link" href="#">'.$value["author"].'</a>
+                                by <a class="post-author-link" href="?profile='.$value["author"].'">'.$value["author"].'</a>
                                 <span class="post-desc-date">
                                     » '.$value["created_date"].'
                                 </span>

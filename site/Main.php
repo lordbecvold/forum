@@ -38,7 +38,7 @@
 		// get admin process (if used)
 		$adminProcess = $siteController->getQueryString("admin");
 
-		// get pocess value (if used)
+		// get process value (if used)
 		$process = $siteController->getQueryString("process");
 
 		// check if admin process used
@@ -84,13 +84,6 @@
 
 			// use registr component
 			include_once("components/RegisterComponent.php");
-		}
-
-		// check if process used (post write)
-		elseif ($process == "new") {
-
-			// use registr component
-			include_once("components/PostWriteComponent.php");
 		}
 
 		// main default component
