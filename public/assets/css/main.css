@@ -73,23 +73,23 @@ body {
 }
 
 .color-red {
-	color: rgb(255, 105, 105);
+	color: rgb(255, 105, 105) !important;
 }
 
 .color-green {
-	color: rgb(54, 216, 54);
+	color: rgb(54, 216, 54) !important;
 }
 
 .color-yellow {
-	color: rgb(240, 240, 72);
+	color: rgb(240, 240, 72) !important;
 }
 
 .color-blue {
-	color: rgb(81, 81, 241);
+	color: rgb(81, 81, 241) !important;
 }
 
 .color-white {
-	color: white;
+	color: white !important;
 }
 
 .basic-link {
@@ -434,6 +434,65 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 	border: 1px solid rgb(231, 47, 47);
 	color: rgb(231, 47, 47);
 }
+
+
+/* POST READER */
+.post-reader {
+	background-color: rgb(41, 44, 46);
+	margin: 5px;
+	padding: 5px;
+	border: 1px solid white;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+}
+
+.post-title {
+	color: white;
+	font-size: 25px;
+	border-bottom: 1px solid white;
+}
+
+.post-author {
+	border-bottom: 1px solid white;
+}
+
+.post-author-avatar {
+	max-width: 30px;
+	margin-bottom: -5.5px;
+}
+
+.post-author-name {
+	color: white;
+	font-size: 25px;
+	position: relative;
+	top: -3px;
+	margin-left: 4px;
+}
+
+.profile-link {
+	color: white;
+	text-decoration: none;
+}
+
+.profile-link:hover {
+	text-decoration: underline;
+}
+
+.post-date-line {
+	float: right;
+	margin-right: 5px;
+	position: relative;
+	top: 12px;
+	font-size: 15px;	
+	color: #bebebe;
+}
+
+.post-content {
+	color: white;
+	font-size: 16px;
+	padding-top: 6px;
+}
+
 
 /* LARGE DESKTOPS CSS */
 @media only screen and (min-width: 2048px) {

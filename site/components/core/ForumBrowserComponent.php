@@ -27,8 +27,14 @@
         // check if forum empty
         if ($postsController->getPostsObjectByForum($forum, $sort, $startBy, $maxPerPage)->num_rows < 1) {
             
-            // print empty forum msg
-            $alertController->normalAlert($forum . " is empty<br><a href='?process=new' class='basic-link'>create post</a>");
+            if ($boardController->isForumExist($forum)) {
+
+                // print empty forum msg
+                $alertController->normalAlert($forum . " is empty<br><a href='?process=new' class='basic-link'>create post</a>");
+            } else {
+                
+                header("location: ErrorHandlerer.php?code=404");      
+            }
         } 
             
         // draw forum posts
@@ -60,7 +66,7 @@
                 echo '
                     <tr>
                         <td>
-                            <a class="post-link" href="?post='.$value["id"].'">'.$value["name"].'</a>
+                            <a class="post-link" href="?post='.$value["id"].'&forum='.$forum.'">'.$value["name"].'</a>
                             <div class="post-name-line"></div>
                             <p class="post-line-text">
                                 by <a class="post-author-link" href="?profile='.$value["author"].'">'.$value["author"].'</a>

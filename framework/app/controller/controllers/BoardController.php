@@ -48,5 +48,25 @@
 
             return $postsController->getPostsObjectByForum($forum, null, 0, 99999999999999)->num_rows;
         }
+
+        // check if forum by name exist in database
+        public function isForumExist($name) {
+
+            global $pageConfig;
+            global $mysqlUtils;
+
+            // select data where forum name
+            $query = mysqli_query($mysqlUtils->mysqlConnect($pageConfig->getValueByName("basedb")), "SELECT * FROM forums WHERE name = '$name'");
+
+            // check if data site > than 0
+            if ($query->num_rows > 0) {
+                $output = true;
+            } else {
+                $output = false;
+            }
+
+            // return final output (boolean)
+            return $output;
+        }
     }
 ?>
