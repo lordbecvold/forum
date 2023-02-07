@@ -46,5 +46,21 @@
             // return final posts objects
             return $posts;
         }
+
+        // get post data by ID
+        public function getPostDataByID($id) {
+
+            global $pageConfig;
+            global $mysqlUtils;
+
+            // build select query where post id
+            $query = mysqli_query($mysqlUtils->mysqlConnect($pageConfig->getValueByName("basedb")), "SELECT * FROM posts WHERE id = '$id'");
+            
+            // get associative array
+            $output = mysqli_fetch_assoc($query);
+
+            // return selected data
+            return $output;
+        }
     }
 ?>

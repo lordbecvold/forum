@@ -465,7 +465,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 	color: white;
 	font-size: 25px;
 	position: relative;
-	top: -3px;
+	top: -1px;
 	margin-left: 4px;
 }
 
@@ -591,5 +591,26 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 	}
 	.post-desc-date {
 		font-size: 10px;
+	}
+	.post-title {
+		font-size: 18px;
+	}
+	.post-author-name {
+		top: 1px;
+		font-size: 16px;
+	}
+	.post-date-line {
+		top: 5px;
+		font-size: 10px;	
+	}
+	.post-author {
+		margin-top: -1px;
+		padding-bottom: 1px;
+	}
+	.post-author-avatar {
+		max-width: 18px;
+	}
+	.post-content {
+		font-size: 14px;
 	}
 }

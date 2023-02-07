@@ -135,5 +135,61 @@
 			// return final output
 			return $output;
 		}
+
+		// get user avara base64 code
+		public function getUserAvatar($username) {
+
+			global $mysqlUtils;
+
+			// check if user token is not null
+			if ($this->getUserToken() != NULL) {
+
+				// return user profile pic
+				return $mysqlUtils->readFromMysql("SELECT image_base64 FROM users WHERE username = '".$username."'", "image_base64");
+			} else {
+				$this->logout();
+			}
+		}
+
+		// get user role by name
+		public function getUserRoleByName($username) {
+			global $mysqlUtils;
+			global $pageConfig;
+
+			// get token count
+			$count = mysqli_fetch_assoc(mysqli_query($mysqlUtils->mysqlConnect($pageConfig->getValueByName('basedb')), "SELECT COUNT(*) AS count FROM users WHERE username='".$username."'"))["count"];
+				
+			// check if token exist in users
+			if ($count == "1") {
+
+				// check if user token is null
+				if ($this->getUserToken() != NULL) {
+
+					// get user role from database
+					$userRole = $mysqlUtils->readFromMysql("SELECT role FROM users WHERE username = '".$username."'", "role");
+					 
+					// get user role output
+					if (strtolower(($userRole)) == "owner") {
+						$role = "Owner";
+					} elseif (strtolower($userRole) == "admin") {
+						$role = "Admin";
+					} elseif (strtolower($userRole) == "developer") {
+						$role = "Developer";
+					} elseif (strtolower($userRole) == "vip") {
+						$role = "VIP";
+					} else {
+						$role = "User";
+					}
+				
+					// final role output
+					return $role;
+					
+				} else {
+					return NULL;
+				}
+			} else {
+				return NULL;
+			}
+		}
     }
 ?>

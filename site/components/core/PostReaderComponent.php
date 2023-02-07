@@ -1,18 +1,80 @@
-<div class="post-reader">
+<?php 
 
-    <div class="color-white">
-        <a class="basic-link" href="/">board</a> / <a class="basic-link" href="?forum=forum">forum</a> / <a class="basic-link" href="#">post</a>
-    </div>
+    // get post ID from url
+    $postID = $siteController->getQueryString("post");
 
-    <p class="post-title">POST TITLE</p>
+    // get forum name from url
+    $forumName = $siteController->getQueryString("forum");
+
+    // check if url use valid parameters
+    if ($postID == null or $forumName == null) {
+        
+        // redirect to error page
+        header("location: ErrorHandlerer.php?code=400");
+    } 
     
-    <p class="post-author">
-        <img class="post-author-avatar" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBw4RDQ0OEA0QDhANDQ0NDw4NDhsNDg0OFREWFxcTFRUYICggGBolGxMTITEhJSkrLi4uFx8zODMsNygtLisBCgoKDQ0NDg0NDisZFRkrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIAOYA2wMBIgACEQEDEQH/xAAaAAEAAwEBAQAAAAAAAAAAAAAAAQQFAwIH/8QAMhABAQABAQYEBAQGAwAAAAAAAAECEQMEEiFRkSIxQWEFcYGhQnKxwSMyUoLh8DNi0f/EABUBAQEAAAAAAAAAAAAAAAAAAAAB/8QAFBEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A+qAKgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIebtMf6p3B7HObXH+qd49ygkQkAAAAAAAAAAAAAAAAAAAEWgjLKSa26SKe232/hn1v/jhvG3uV9vSfu5A9Z7TK+eVv1eNEiiNHrHKzytnyqAFnZb5lPPxT7r2y2kyxlmul6shY3Ta2Zaa8ulvJBpCEgAAAAAAAAAAAAAAAAK2/bSTCzXnfT10WMrpLb6c/oyNpncsrlfX7QHkBQAAAAdN2kueOt05uYDZSr7nteLDn5zlVhAAAAAAAAAAAAAAAABX37LTC+9mP+9mau/EbywnvapAAKAAAAAALPw/LxWdcf0aLL3O/wATH31n2aiAAAAAAAAAAAAAAADjvW14cdZ53lAVfiF8WP5f3VXrabS5XW3V5UAAAAAAAAdN3v8AEw/NGqxpdLrPTmv7nvFytmXPSayoLYAAAAAAAAAAAAACp8Qnhntl+y28bXCZY2X1BkD1tMLjdLNHlQAAAAAAAAWdwnjvtjVaRpbnseHHn53z9vZB3SAAAAAAAAAAAAACEgK2/wD/AB/3Ys5o7/PB/dGcAAoAAAAAAtfD74svy/u0FD4dj4sr6Sad19BCQAAAAAAAAAAAAAABz281wyn/AFrJbNjHzx0tnS6AgBQAAAAAkBf+Hzw29clpz3fDhwxl8/V1QAAAAAAAAAAAAAAAAFLf9l5ZSeXnp0XUWAxha2+52S2XWTW6XlZFVQAAAAWNy2VuUvpOf1eNhsLneknnWls8JjJJ5T7+6D0kAAAAAAAAAAAAAAQCRFrxdrjPxTuDoOGW94T8Wvyjllv2Ppjb9gd95vgy+TKd9tvWWUs0klcFAAAAF74deWU95+i4ydhtrjrppz6rOO/T1x7VBdFeb5h1s+ce8dvhfxQHUeZlOsv1egAAAAAAAAAU983jTwzz9b09gdNvvWOPL+a9J6fNT2m9Z3109pycQC29UaJFAAAAAAAAAAAAB0w2+c8sr8rzjmAvbHfZeWU0955f4W5WMsbrvHDdL/Lfsg0hCQAAAAc9vtOHG325fNk2+t875rvxDK+HGS9byU+G9L2BAnhvS9jhvS9lECeG9L2OG9L2BAnhvS9jhvS9gQJ4b0vY4b0vYECeG9L2OG9L2BAnhvS9jhvS9gQJ4b0vY4b0vYECeG9L2OG9L2BAnhvS9jhvS9gQJ4b0vY4b0vYF/cNrrjcb54/otMzdLcc5yvPleXVpoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/9k="> 
-        <span class="post-author-name"><a class="profile-link" href="#">username</a></span>
-        <span class="post-date-line">DATE</span>
-    </p>
+    // post content reader
+    else {
+
+        // post reader component
+        echo '<div class="post-reader">';
     
-    <p class="post-content">
-        LOREM KOKOTTUM NQM CS CO JE ZMRDE
-    </p>
-</div>
+        // get post data where ID
+        $postData = $postsController->getPostDataByID($postID);
+
+        // add path line
+        echo '
+            <div class="color-white">
+                <a class="basic-link" href="/">board</a> / <a class="basic-link" href="?forum='.$forumName.'">forum</a> / <a class="basic-link" href="#">'.$postData["name"].'</a>
+            </div>
+        ';
+
+        // add post title
+        echo '<p class="post-title">'.$postData["name"].'</p>';
+
+        // ADMIN USER-NAME COLOR
+        if ($userController->getUserRoleByName($postData["author"]) == "Owner" || $userController->getUserRoleByName($postData["author"]) == "Admin") {
+            $username = '<span class="post-author-name"><a class="profile-link color-red" href="?profile='.$postData["author"].'">'.$postData["author"].'</a></span>';
+
+        // DEVELOPER USER-NAME COLOR
+        } else if ($userController->getUserRoleByName($postData["author"]) == "Developer") {
+
+            $username = '<span class="post-author-name"><a class="profile-link color-blue" href="?profile='.$postData["author"].'">'.$postData["author"].'</a></span>';
+
+        // VIP USER-NAME COLOR
+        } else if ($userController->getUserRoleByName($postData["author"]) == "VIP") {
+
+            $username = '<span class="post-author-name"><a class="profile-link color-yellow" href="?profile='.$postData["author"].'">'.$postData["author"].'</a></span>';
+
+        // USER USER-NAME COLOR
+        } else if ($userController->getUserRoleByName($postData["author"]) == "User") {
+            
+            $username = '<span class="post-author-name"><a class="profile-link color-green" href="?profile='.$postData["author"].'">'.$postData["author"].'</a></span>';
+
+        } else {
+
+            // get unknow user role color
+            $username = '<span class="post-author-name"><a class="profile-link" href="?profile='.$postData["author"].'">'.$postData["author"].'</a></span>';
+        }
+
+
+        // add post author line
+        echo '
+            <p class="post-author">
+                <img class="post-author-avatar" src="data:image/jpeg;base64, '.$userController->getUserAvatar($postData["author"]).'"> 
+                '.$username.'
+                <span class="post-date-line">'.$postData["created_date"].'</span>
+            </p>
+        ';
+
+        // add post content
+        echo '
+            <p class="post-content">
+                '.$postData["content"].'
+            </p>
+        ';
+
+        // end of post component
+        echo '</div>';
+    }
+?>
