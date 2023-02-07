@@ -5,7 +5,7 @@
     class PostsController {
 
         // get posts by forum name (use * for all forums)
-        public function getPostsObjectByForum($forum, $sort) {
+        public function getPostsObjectByForum($forum, $sort, $startBy, $limit) {
 
             global $mysqlUtils;
             global $pageConfig;
@@ -20,12 +20,12 @@
                 if ($sort == "new") {
 
                     // select data sort by new
-                    $posts = mysqli_query($mysqlUtils->mysqlConnect($pageConfig->getValueByName("basedb")), "SELECT * FROM posts ORDER BY id DESC");
+                    $posts = mysqli_query($mysqlUtils->mysqlConnect($pageConfig->getValueByName("basedb")), "SELECT * FROM posts ORDER BY id DESC LIMIT $startBy, $limit");
 
                 } else {
 
                     // select all posts data
-                    $posts = mysqli_query($mysqlUtils->mysqlConnect($pageConfig->getValueByName("basedb")), "SELECT * FROM posts");
+                    $posts = mysqli_query($mysqlUtils->mysqlConnect($pageConfig->getValueByName("basedb")), "SELECT * FROM posts LIMIT $startBy, $limit");
                 }
             } else {
                 
@@ -33,12 +33,12 @@
                 if ($sort == "new") {
 
                     // select post data with sort by new
-                    $posts = mysqli_query($mysqlUtils->mysqlConnect($pageConfig->getValueByName("basedb")), "SELECT * FROM posts WHERE forum = '$forum' ORDER BY id DESC");
+                    $posts = mysqli_query($mysqlUtils->mysqlConnect($pageConfig->getValueByName("basedb")), "SELECT * FROM posts WHERE forum = '$forum' ORDER BY id DESC LIMIT $startBy, $limit");
 
                 } else {
 
                     // select posts data by forum name
-                    $posts = mysqli_query($mysqlUtils->mysqlConnect($pageConfig->getValueByName("basedb")), "SELECT * FROM posts WHERE forum = '$forum'");
+                    $posts = mysqli_query($mysqlUtils->mysqlConnect($pageConfig->getValueByName("basedb")), "SELECT * FROM posts WHERE forum = '$forum' LIMIT $startBy, $limit");
                 }
 
             }

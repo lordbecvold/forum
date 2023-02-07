@@ -23,6 +23,9 @@
 			"loginCookie"   => "4h6rR2L0ZSWY7kfGX5f7lQvvvi5xVP52",	// login cookie name
 			"loginValue"    => "rF5LLtGUj9TPu626yqjP8U6z84k2dWVy",	// value of login cookie
 
+			/* forum settings */
+			"max_items_per_page" => 50,
+
 			/* Resources */
 			"favicon_path" => "img/favicon.png", // favicon path
 

@@ -27,7 +27,7 @@ Becvold forum is a classic forum with a minimum of javascript designed overall f
 - [X] Load forum category from mysql table
 - [X] sub navigation in forum browser (new post, show own posts)
 - [X] Post list structure
-- [ ] posts list limit (page system)
+- [X] Posts list limit (page system)
 - [ ] Post reader
 - [ ] new post compnent (with image share)
 - [ ] Comment and share post (only for logged users)
