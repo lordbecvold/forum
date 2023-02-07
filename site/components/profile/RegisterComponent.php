@@ -10,7 +10,7 @@
     } else {
 
         // import main user bar
-        include_once("elements/UserBar.php");
+        include_once(__DIR__."/../elements/UserBar.php");
 
         // get register status
         $status = $siteController->getQueryString("status");
@@ -98,7 +98,7 @@
         }
 
         // import user register from
-        include_once("forms/RegisterForm.php");
+        include_once(__DIR__."/../forms/RegisterForm.php");
     }
 ?>
 </div>

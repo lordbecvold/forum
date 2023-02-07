@@ -10,7 +10,7 @@
     } else {
 
         // import main user bar
-        include_once("elements/UserBar.php");
+        include_once(__DIR__."/../elements/UserBar.php");
 
         // check if post request
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -65,7 +65,7 @@
         }
 
         // import login form
-        include_once("forms/LoginForm.php");
+        include_once(__DIR__."/../forms/LoginForm.php");
     }
 ?> 
 </div>

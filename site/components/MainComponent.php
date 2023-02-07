@@ -7,8 +7,11 @@
 		// get process value (if used)
 		$process = $siteController->getQueryString("process");
 
-        // get profile name form url query
+        // get profile name form url query (if used)
         $profile = $siteController->getQueryString("profile");
+ 
+        // get post id from url (if used)
+        $postID = $siteController->getQueryString("post");
 
         // import main user bar
         include_once("elements/UserBar.php");
@@ -22,33 +25,42 @@
 
         ///////////////////////////////////////////////////////////////////////
 
-        // check if profile viewer used
-        if ($profile != null) {
+        // check if post reader used
+        if ($postID != null) {
 
-            // use profile viewer
-            include_once("ProfileViewer.php");
+            // use prost reader
+            include_once("core/PostReaderComponent.php");
 
         } else {
 
-            // check if process = new post
-            if ($process == "new") {
+            // check if profile viewer used
+            if ($profile != null) {
 
-                // use new post component
-                include_once("PostWriteComponent.php");
+                // use profile viewer
+                include_once("profile/ProfileViewer.php");
 
             } else {
-                // check if forum not seted
-                if ($forum == null) {
 
-                    // import forum board
-                    include_once("BoardComponent.php");
-                } 
-                
-                // forum borwser
-                else {
+                // check if process = new post
+                if ($process == "new") {
 
-                    // import forum browser
-                    include_once("ForumBrowserComponent.php");
+                    // use new post component
+                    include_once("core/PostWriteComponent.php");
+
+                } else {
+                    // check if forum not seted
+                    if ($forum == null) {
+
+                        // import forum board
+                        include_once("core/BoardComponent.php");
+                    } 
+                    
+                    // forum borwser
+                    else {
+
+                        // import forum browser
+                        include_once("core/ForumBrowserComponent.php");
+                    }
                 }
             }
         }

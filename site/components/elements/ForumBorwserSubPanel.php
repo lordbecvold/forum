@@ -11,11 +11,6 @@
         <?php 
             // add new post link
             echo '<a class="basic-link" href="?process=new&forum='.$forum.'">NEW POST</a>';
-
-            // and my posts link to sub panel (if user logged in)
-            if ($userController->isUserLogged()) {
-                echo '<a class="basic-link" href="#">MY POSTS</a>';
-            }
         ?>
         <span class="right sort-panel">
             <span class="sort-text">sort by: </span>

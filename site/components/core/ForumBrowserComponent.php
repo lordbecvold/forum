@@ -10,7 +10,7 @@
     if ($forum != null) {
 
         // include sub panel
-        include_once("elements/ForumBorwserSubPanel.php");
+        include_once(__DIR__."/../elements/ForumBorwserSubPanel.php");
 
         // check if forum empty
         if ($postsController->getPostsObjectByForum($forum, $sort)->num_rows < 1) {
@@ -48,7 +48,7 @@
                 echo '
                     <tr>
                         <td>
-                            <a class="post-link" href="#">'.$value["name"].'</a>
+                            <a class="post-link" href="?post='.$value["id"].'">'.$value["name"].'</a>
                             <div class="post-name-line"></div>
                             <p class="post-line-text">
                                 by <a class="post-author-link" href="?profile='.$value["author"].'">'.$value["author"].'</a>
