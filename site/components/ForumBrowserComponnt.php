@@ -16,7 +16,7 @@
         if ($postsController->getPostsObjectByForum($forum, $sort)->num_rows < 1) {
            
             // print empty forum msg
-            $alertController->normalAlert($forum . " is empty<br><a href='#' class='basic-link'>create post</a>");
+            $alertController->normalAlert($forum . " is empty<br><a href='?process=new' class='basic-link'>create post</a>");
         } 
         
         // draw forum posts

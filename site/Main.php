@@ -86,6 +86,13 @@
 			include_once("components/RegisterComponent.php");
 		}
 
+		// check if process used (post write)
+		elseif ($process == "new") {
+
+			// use registr component
+			include_once("components/PostWriteComponent.php");
+		}
+
 		// main default component
 		else {
 
