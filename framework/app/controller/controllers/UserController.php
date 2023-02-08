@@ -71,48 +71,6 @@
 			}
         }
 
-        // get user role
-        public function getUserRole() {
-
-			global $mysqlUtils;
-			global $pageConfig;
-
-			// get token count
-			$count = mysqli_fetch_assoc(mysqli_query($mysqlUtils->mysqlConnect($pageConfig->getValueByName('basedb')), "SELECT COUNT(*) AS count FROM users WHERE token='".$this->getUserToken()."'"))["count"];
-				
-			// check if token exist in users
-			if ($count == "1") {
-
-				// check if user token is null
-				if ($this->getUserToken() != NULL) {
-
-					// get user role from database
-					$userRole = $mysqlUtils->readFromMysql("SELECT role FROM users WHERE token = '".$this->getUserToken()."'", "role");
-					 
-					// get user role output
-					if (strtolower(($userRole)) == "owner") {
-						$role = "Owner";
-					} elseif (strtolower($userRole) == "admin") {
-						$role = "Admin";
-					} elseif (strtolower($userRole) == "developer") {
-						$role = "Developer";
-					} elseif (strtolower($userRole) == "vip") {
-						$role = "VIP";
-					} else {
-						$role = "User";
-					}
-				
-					// final role output
-					return $role;
-					
-				} else {
-					return NULL;
-				}
-			} else {
-				return NULL;
-			}
-        }
-
 		// check if user is admin
 		public function checkIsUserAdmin() {
 
@@ -120,7 +78,7 @@
 			if ($this->isUserLogged()) {
 
 				// check if user admin
-				if (($this->getUserRole() == "Owner") || ($this->getUserRole() == "Admin")) {
+				if (($this->getUserRoleByName($this->getUserName()) == "Owner") || ($this->getUserRoleByName($this->getUserName()) == "Admin")) {
 					$output = true;
 			
 				} else {

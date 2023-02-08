@@ -48,7 +48,7 @@
 			if ($userController->isUserLogged()) {
 
 				// check if user admin
-				if (($userController->getUserRole() == "Owner") || ($userController->getUserRole() == "Admin")) {
+				if (($userController->getUserRoleByName($this->getUserName()) == "Owner") || ($userController->getUserRoleByName($this->getUserName()) == "Admin")) {
 
 					// use admin system component
 					include_once("admin/AdminMain.php");

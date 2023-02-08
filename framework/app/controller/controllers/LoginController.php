@@ -64,7 +64,7 @@
 			$sessionUtils->setSession("userToken", $token);
 
 			// save role to session
-			$sessionUtils->setSession("role", $userController->getUserRole());
+			$sessionUtils->setSession("role", $userController->getUserRoleByName($userController->getUserName()));
 
 			// log action to mysql
 			$mysqlUtils->logToMysql("Success login", "user ".$userController->getUserName()." success login");
@@ -122,7 +122,7 @@
 			$sessionUtils->setSession("userToken", $userToken);
 
 			// save role to session
-			$sessionUtils->setSession("role", $userController->getUserRole());
+			$sessionUtils->setSession("role", $userController->getUserRoleByName($userController->getUserName()));
 
 			// log action to mysql
 			$mysqlUtils->logToMysql("Success login", "user ".$userController->getUserName()." success login by login cookie");

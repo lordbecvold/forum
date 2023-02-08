@@ -17,27 +17,27 @@
                 if ($userController->isUserLogged()) {
 
                     // owner role color
-                    if ($userController->getUserRole() == "Owner") {
+                    if ($userController->getUserRoleByName($userController->getUserName()) == "Owner") {
                         $user = "<span class='color-red'>". $userController->getUserName() . "</span>";
                     }
                     
                     // admin role color
-                    elseif ($userController->getUserRole() == "Admin") {
+                    elseif ($userController->getUserRoleByName($userController->getUserName()) == "Admin") {
                         $user = "<span class='color-red'>". $userController->getUserName() . "</span>";
                     }
  
                     // developer role color
-                    elseif ($userController->getUserRole() == "Developer") {
+                    elseif ($userController->getUserRoleByName($userController->getUserName()) == "Developer") {
                         $user = "<span class='color-blue'>". $userController->getUserName() . "</span>";
                     }
 
                     // VIP role color
-                    elseif ($userController->getUserRole() == "VIP") {
+                    elseif ($userController->getUserRoleByName($userController->getUserName()) == "VIP") {
                         $user = "<span class='color-yellow'>". $userController->getUserName() . "</span>";
                     }
 
                     // user role color
-                    elseif ($userController->getUserRole() == "User") {
+                    elseif ($userController->getUserRoleByName($userController->getUserName()) == "User") {
                         $user = "<span class='color-green'>". $userController->getUserName() . "</span>";
                     }
 
