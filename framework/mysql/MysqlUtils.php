@@ -35,11 +35,12 @@
         public function insertQuery($query) {
 
             global $configOBJ;
+            global $alertController;
 
             $useInsertQuery = mysqli_query($this->mysqlConnect($configOBJ->config["basedb"]), $query);
             if (!$useInsertQuery) {
-                http_response_code(503);
-                die('The service is currently unavailable due to the inability to send requests');
+                http_response_code(503); 
+                die($alertController->normalAlert('The service is currently unavailable due to the inability to send requests'));
             }
         }
 
