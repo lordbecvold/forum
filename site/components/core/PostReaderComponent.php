@@ -25,7 +25,7 @@
         // add path line
         echo '
             <div class="color-white">
-                <a class="basic-link" href="/">board</a> / <a class="basic-link" href="?forum='.$forumName.'">forum</a> / <a class="basic-link" href="#">'.$postData["name"].'</a>
+                <a class="basic-link" href="/">board</a> / <a class="basic-link" href="?forum='.$forumName.'">'.$forumName.'</a> / <a class="basic-link" href="#">'.$postData["name"].'</a>
             </div>
         ';
 
