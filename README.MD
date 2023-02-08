@@ -9,6 +9,9 @@ Becvold forum is a classic forum with a minimum of javascript designed overall f
 - Insert database structure to mysql
 * next_install_instruction
 
+## Rank system
+* rank_system_info
+
 ## Config
 * config_instruction
 
@@ -30,8 +33,8 @@ Becvold forum is a classic forum with a minimum of javascript designed overall f
 - [X] Posts list limit (page system)
 - [X] Post reader
 - [ ] new post compnent (with image share)
-- [ ] Comment and share post (only for logged users)
 - [ ] Like posts (for logged users)
+- [ ] Comment and share post (only for logged users)
 - [ ] Highlight links in post (only for logged users)
 - [ ] Post editor (for admin & post owner)
 - [ ] Search system (where post name)
