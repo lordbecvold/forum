@@ -11,7 +11,11 @@
     
             echo "new post componnt in ".$forum;
         }
+
+    // no login users
     } else {
+
+        // flash error alert
         $alertController->normalAlert(
             "Only a logged in user can create a new thread!
             <br>
