@@ -32,7 +32,8 @@ Becvold forum is a classic forum with a minimum of javascript designed overall f
 - [X] Post list structure
 - [X] Posts list limit (page system)
 - [X] Post reader
-- [ ] new post compnent (with image share)
+- [X] New post compnent
+- [ ] show image from image link (imgur, ctrlv.cz etc)
 - [ ] Like posts (for logged users)
 - [ ] Comment and share post (only for logged users)
 - [ ] Highlight links in post (only for logged users)

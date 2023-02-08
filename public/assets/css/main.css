@@ -231,6 +231,7 @@ body {
 
 input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus, input:-webkit-autofill:active {
 	font-size: 18px;
+	color: white;
     -webkit-box-shadow: 0 0 0px 1000px rgb(41, 41, 41) inset !important;
 }
 
@@ -407,6 +408,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 	border-collapse: collapse;
 	padding: 4px;
 	width: 100%;
+	color: white;
 }
 
 .post-list th, .post-list td {
@@ -491,6 +493,18 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 	color: white;
 	font-size: 16px;
 	padding-top: 6px;
+}
+
+
+/* NEW POST CREATE */
+.new-post-title {
+	width: 100%;
+}
+
+.new-post-content {
+	resize: none;
+	width: 500px;
+	height: 200px;
 }
 
 
@@ -612,5 +626,9 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 	}
 	.post-content {
 		font-size: 14px;
+	}
+	.new-post-content {
+		width: 280px;
+		height: 180px;
 	}
 }

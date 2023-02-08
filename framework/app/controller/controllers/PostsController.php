@@ -62,5 +62,19 @@
             // return selected data
             return $output;
         }
+
+        // send new post data
+        public function sendNewPost($name, $forum, $content) {
+
+            global $mysqlUtils;
+            global $userController;
+
+            // get user & date
+            $author = $userController->getUserName();
+            $created_date = date('d.m.Y H:i');
+
+            // insert new post
+            $mysqlUtils->insertQuery("INSERT INTO `posts`(`name`, `author`, `forum`, `created_date`, `content`) VALUES ('$name', '$author', '$forum', '$created_date', '$content')");
+        }
     }
 ?>
