@@ -33,11 +33,21 @@
                     // insert post content to database
                     } else {
 
-                        // insert new post
-                        $postsController->sendNewPost($name, $forum, $content);
+                        // check if title lenght is maximal 50 chars
+                        if (strlen($name) > 50) {
+                            $alertController->errorAlert("Maximal title name can have 50 characters");
 
-                        // redirect to forum page
-                        header("location: ?forum=$forum");
+                        // check if comtent lenght is maximal 10000 chars
+                        } elseif (strlen($content) > 10000) {
+                            $alertController->errorAlert("Maximal content name can have 10000 characters");
+
+                        } else {
+                            // insert new post
+                            $postsController->sendNewPost($name, $forum, $content);
+
+                            // redirect to forum page
+                            header("location: ?forum=$forum");
+                        }
                     }
                 } 
                 
