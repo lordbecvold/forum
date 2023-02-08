@@ -457,9 +457,10 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 }
 
 .post-title {
-	color: white;
+	color: rgb(218, 218, 218);
 	font-size: 25px;
 	border-bottom: 1px solid white;
+	padding-bottom: 1px;
 }
 
 .post-author {
@@ -472,7 +473,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 }
 
 .post-author-name {
-	color: white;
+	color: rgb(218, 218, 218);
 	font-size: 25px;
 	position: relative;
 	top: -1px;
@@ -498,7 +499,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 }
 
 .post-content {
-	color: white;
+	color: rgb(218, 218, 218);
 	font-size: 16px;
 	padding-top: 6px;
 }
@@ -519,6 +520,9 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 /* LARGE DESKTOPS CSS */
 @media only screen and (min-width: 2048px) {
 	.container {
+		width: 80%;
+	}
+	.footer {
 		width: 80%;
 	}
 }
