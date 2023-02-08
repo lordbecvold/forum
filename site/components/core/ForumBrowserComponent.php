@@ -1,3 +1,4 @@
+<div class="forum-borowser">
 <?php // forum borwser component
 
     // get max per page form config
@@ -114,3 +115,4 @@
         header("location: ErrorHandlerer.php?code=400");        
     }
 ?>
+</div>
