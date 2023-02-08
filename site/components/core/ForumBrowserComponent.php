@@ -30,7 +30,7 @@
             if ($boardController->isForumExist($forum)) {
 
                 // print empty forum msg
-                $alertController->normalAlert($forum . " is empty<br><a href='?process=new' class='basic-link'>create post</a>");
+                $alertController->normalAlert($forum . " is empty<br><a href='?process=new&forum=".$forum."' class='basic-link'>create post</a>");
             } else {
                 
                 header("location: ErrorHandlerer.php?code=404");      
