@@ -1,5 +1,4 @@
 <?php 
-
     // get forum name from url
     $forum = $siteController->getQueryString("forum");  
 
