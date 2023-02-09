@@ -37,6 +37,7 @@ Becvold forum is a classic forum with a minimum of javascript designed overall f
 - [ ] Highlight links in post (only for logged users)
 - [ ] show image from image link (imgur, ctrlv.cz etc)
 - [ ] Post editor (for admin & post owner)
+- [ ] Post delete (for admin & post owner)
 - [ ] Search system (where post name)
 - [ ] Add loging actions (mysql log)
 - [ ] Ban/mute system
