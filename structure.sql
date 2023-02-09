@@ -8,6 +8,17 @@ SET sql_mode = 'NO_AUTO_VALUE_ON_ZERO';
 
 SET NAMES utf8mb4;
 
+DROP TABLE IF EXISTS `comments`;
+CREATE TABLE `comments` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `post_ID` char(255) NOT NULL,
+  `author` char(255) NOT NULL,
+  `comment` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `comment_date` char(255) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+
+
 DROP TABLE IF EXISTS `forums`;
 CREATE TABLE `forums` (
   `id` int NOT NULL AUTO_INCREMENT,
@@ -55,4 +66,4 @@ CREATE TABLE `users` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 
--- 2023-02-04 14:17:08
+-- 2023-02-09 15:37:04

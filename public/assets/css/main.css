@@ -504,6 +504,79 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 	padding-top: 6px;
 }
 
+.comment-box {
+	margin-top: 20px;
+	border: 1px solid rgb(179, 179, 179);
+	padding: 6px;
+	background-color: rgb(37, 39, 41);
+}
+
+.comment-box-title {
+	color: white;
+	font-size: 20px;
+	font-weight: bold;
+	margin-left: 1px;
+	margin-bottom: 2px;
+}
+
+.comment {
+	border: 1px solid rgb(179, 179, 179);
+	padding: 10px;
+	margin-bottom: 8px;
+	background-color: rgb(41, 42, 43);
+}
+
+.comment-title {
+	border-bottom: 1px solid rgb(110, 110, 110);
+}
+
+.comment-date {
+	top: 0px;
+}
+
+.comment-text {
+	color: #bebebe;
+	font-size: 16px;
+	padding-top: 5px;
+	max-width: 100%;
+}
+
+.comment-username {
+	color: white;
+	font-size: 18px;
+	text-decoration: none;
+}
+
+.comment-avatar {
+	max-width: 20px;
+	padding: 0;
+	margin: -2px;
+	margin-left: 1px;
+	margin-bottom: -3px;
+}
+
+.comment-form {
+	border: 1px solid rgb(179, 179, 179);
+	padding: 10px;
+	margin-bottom: 8px;
+	margin-top: 20px;
+	background-color: rgb(41, 42, 43);
+}
+
+.new-comment-title {
+	text-align: left;
+	color: white;
+}
+
+.comment-textarea {
+	width: 100%;
+	resize: none;
+}
+
+.no-comments {
+	color: white;
+}
+
 
 /* NEW POST CREATE */
 .new-post-title {
@@ -642,5 +715,17 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 	.new-post-content {
 		width: 280px;
 		height: 180px;
+	}
+	.comment-box-title {
+		font-size: 16px;
+	}
+	.comment-username {
+		font-size: 14px;
+	}
+	.comment-avatar {
+		max-width: 17px;
+	}
+	.comment-text {
+		font-size: 14px;
 	}
 }

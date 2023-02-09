@@ -76,5 +76,34 @@
             // insert new post
             $mysqlUtils->insertQuery("INSERT INTO `posts`(`name`, `author`, `forum`, `created_date`, `content`) VALUES ('$name', '$author', '$forum', '$created_date', '$content')");
         }
+
+        // get comments where post ID
+        public function getCommentsWherePostID($id) {
+
+            global $mysqlUtils;
+            global $pageConfig;
+
+            // get comments where ID
+            $comments = mysqli_query($mysqlUtils->mysqlConnect($pageConfig->getValueByName(("basedb"))), "SELECT * FROM comments WHERE post_ID = $id");
+
+            // return comments
+            return $comments;
+        }
+
+        // submit new comment to database
+        public function inserComment($postID, $comment) {
+
+            global $mysqlUtils;
+            global $userController;
+
+            // get comment date
+            $comment_date = date('d.m.Y H:i');
+
+            // get comment posted
+            $author = $userController->getUserName();
+
+            // insert new comment
+            $mysqlUtils->insertQuery("INSERT INTO `comments`(`post_ID`, `author`, `comment`, `comment_date`) VALUES ('$postID', '$author', '$comment', '$comment_date')");
+        }
     }
 ?>

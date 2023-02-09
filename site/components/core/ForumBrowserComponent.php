@@ -28,6 +28,7 @@
         // check if forum empty
         if ($postsController->getPostsObjectByForum($forum, $sort, $startBy, $maxPerPage)->num_rows < 1) {
             
+            // check if forum exist
             if ($boardController->isForumExist($forum)) {
 
                 // print empty forum msg
@@ -56,7 +57,6 @@
                     <tr>
                         <th>Post</th>
                         <th>Answers</th>
-                        <th>Likes</th>
                     </tr>
             ';
                 
@@ -77,8 +77,7 @@
                             </p>
                         </td>
                             
-                        <td class="text-center">0</td>
-                        <td class="text-center">0</td>
+                        <td class="text-center">'.$postsController->getCommentsWherePostID($value["id"])->num_rows.'</td>
                     </tr>
                 ';
             }
