@@ -34,6 +34,7 @@ Becvold forum is a classic forum with a minimum of javascript designed overall f
 - [X] Post reader
 - [X] New post compnent
 - [X] Comment system
+- [ ] Profile page
 - [ ] Highlight links in post (only for logged users)
 - [ ] show image from image link (imgur, ctrlv.cz etc)
 - [ ] Post editor (for admin & post owner)
