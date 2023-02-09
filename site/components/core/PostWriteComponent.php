@@ -37,9 +37,9 @@
                         if (strlen($name) > 50) {
                             $alertController->errorAlert("Maximal title name can have 50 characters");
 
-                        // check if comtent lenght is maximal 10000 chars
-                        } elseif (strlen($content) > 10000) {
-                            $alertController->errorAlert("Maximal content name can have 10000 characters");
+                        // check if comtent lenght is maximal 90000 chars
+                        } elseif (strlen($content) > 90000) {
+                            $alertController->errorAlert("Maximal content name can have 90000 characters");
 
                         } else {
                             // insert new post
