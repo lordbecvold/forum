@@ -16,23 +16,27 @@
     // post content reader
     else {
 
-        // check if submit comment
-        if (isset($_POST["comment-submit"])) {
+        // check if user logged in
+        if ($userController->isUserLogged()) {
 
-            // get comment form input
-            $comment = $mysqlUtils->escapeString($_POST["comment-text"], true, true);
+            // check if submit comment
+            if (isset($_POST["comment-submit"])) {
 
-            // check if comment is empty
-            if (!empty($comment)) {
+                // get comment form input
+                $comment = $mysqlUtils->escapeString($_POST["comment-text"], true, true);
 
-                // check if comment have maximal lenght
-                if (strlen($comment) < 850) {
+                // check if comment is empty
+                if (!empty($comment)) {
 
-                    // send comment 
-                    $postsController->inserComment($postID, $comment);
-    
-                    // redirect to this
-                    header("location: ?post=".$postID."&forum=".$forumName);
+                    // check if comment have maximal lenght
+                    if (strlen($comment) < 850) {
+
+                        // send comment 
+                        $postsController->inserComment($postID, $comment);
+        
+                        // redirect to this
+                        header("location: ?post=".$postID."&forum=".$forumName);
+                    }
                 }
             }
         }
