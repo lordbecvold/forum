@@ -131,12 +131,12 @@
                 // USER USER-NAME COLOR
                 } else if ($userController->getUserRoleByName($value["author"]) == "User") {
                     
-                    $username = '<a href="?profile='.$value["author"].'" class="comment-username color-green">'.$postData["author"].'</a>';
+                    $username = '<a href="?profile='.$value["author"].'" class="comment-username color-green">'.$value["author"].'</a>';
 
                 } else {
 
                     // get unknow user role color
-                    $username = '<a href="?profile='.$value["author"].'" class="comment-username">'.$postData["author"].'</span>';
+                    $username = '<a href="?profile='.$value["author"].'" class="comment-username">'.$value["author"].'</span>';
                 }
 
                 // add comment component
