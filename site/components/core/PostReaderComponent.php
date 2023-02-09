@@ -70,7 +70,7 @@
         // add post content
         echo '
             <p class="post-content">
-                '.$postData["content"].'
+                '.nl2br($postData["content"]).'
             </p>
         ';
 
