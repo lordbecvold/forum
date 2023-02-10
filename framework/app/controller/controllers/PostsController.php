@@ -105,5 +105,18 @@
             // insert new comment
             $mysqlUtils->insertQuery("INSERT INTO `comments`(`post_ID`, `author`, `comment`, `comment_date`) VALUES ('$postID', '$author', '$comment', '$comment_date')");
         }
+
+        // get posts lists by username
+        public function getPostsByUsername($username) {
+
+            global $mysqlUtils;
+            global $pageConfig;
+
+            // get posts
+            $posts = mysqli_query($mysqlUtils->mysqlConnect($pageConfig->getValueByName("basedb")), "SELECT * FROM posts WHERE author = '$username'");
+        
+            // return posts list
+            return $posts;
+        }
     }
 ?>
