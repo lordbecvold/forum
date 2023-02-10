@@ -1,22 +1,20 @@
 ## Becvold forum
 Becvold forum is a classic forum with a minimum of javascript designed overall for maximum security and performance.
-{img} {admin_sys_img}
 
 ## Installation
 - Set web root to web dir public/
 - Disable apache autoindex
 - Run install script
 - Insert database structure to mysql
-* next_install_instruction
+- edit (url, https, mysql) config.php file
+- register new user (default user is automatic role owner)
 
 ## Rank system
-* rank_system_info
-
-## Config
-* config_instruction
-
-## Theme
-* custom_theme_file_desc
+- OWNER: COLOR: red, DELETE: can delete posts & access to adminer
+- ADMIN: COLOR: red, DELETE: can delete posts & access to adminer
+- DEVELOPER: COLOR: blue
+- VIP: COLOR: gold
+- USER: COLOR: green
 
 ## DEV PLAN
 - [X] Basic structure
@@ -38,11 +36,8 @@ Becvold forum is a classic forum with a minimum of javascript designed overall f
 - [X] Search system (where post name)
 - [X] Highlight links in post (only for logged users)
 - [X] Post delete (for admin & post owner)
-- [ ] Ban/mute system
-- [ ] Add loging actions (mysql log)
+- [X] Add loging actions (mysql log)
 - [ ] Test & fix CSS responsivity
-- [ ] Admin system (edit forum category, delete posts, delete comments, ban / mute / rank change for users)
-- [ ] CSS Colors in separate file (theme.css)
 - [ ] Code clean
 - [ ] Penetration testing
 

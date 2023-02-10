@@ -73,6 +73,9 @@
             $author = $userController->getUserName();
             $created_date = date('d.m.Y H:i');
 
+            // log to database
+            $mysqlUtils->logToMysql("new post", $author . " created new form");
+
             // insert new post
             $mysqlUtils->insertQuery("INSERT INTO `posts`(`name`, `author`, `forum`, `created_date`, `content`) VALUES ('$name', '$author', '$forum', '$created_date', '$content')");
         }
@@ -102,6 +105,9 @@
             // get comment posted
             $author = $userController->getUserName();
 
+            // log to database
+            $mysqlUtils->logToMysql("new comment", $author . " commented post with id: " . $postID);
+
             // insert new comment
             $mysqlUtils->insertQuery("INSERT INTO `comments`(`post_ID`, `author`, `comment`, `comment_date`) VALUES ('$postID', '$author', '$comment', '$comment_date')");
         }
@@ -128,6 +134,9 @@
             // get posts
             $posts = mysqli_query($mysqlUtils->mysqlConnect($pageConfig->getValueByName("basedb")), "SELECT * FROM posts WHERE name LIKE '%$search%'");
         
+            // log to database
+            $mysqlUtils->logToMysql("search", "search: ".$search);
+
             // return posts list
             return $posts;
 
@@ -137,6 +146,9 @@
         public function deletePostByID($id) {
 
             global $mysqlUtils;
+
+            // log to database
+            $mysqlUtils->logToMysql("post delete", "delete post-id: ".$id);
 
             // send delete posts query
             $mysqlUtils->insertQuery("DELETE FROM posts WHERE id = '$id'");

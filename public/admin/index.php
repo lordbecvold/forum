@@ -1,3 +1,3 @@
 <?php // redirect to admin page
-	header("location: ../?admin=dashboard");
+	header("location: /admin/adminer.php");
 ?>
