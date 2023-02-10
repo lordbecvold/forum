@@ -65,7 +65,7 @@
 		elseif ($process == "login") {
 
 			// use login component
-			include_once("components/profile/LoginComponent.php");
+			include_once("components/auth/LoginComponent.php");
 		}
 
 		// check if process used (logout)
@@ -83,7 +83,7 @@
 		elseif ($process == "register") {
 
 			// use registr component
-			include_once("components/profile/RegisterComponent.php");
+			include_once("components/auth/RegisterComponent.php");
 		}
 
 		// main default component

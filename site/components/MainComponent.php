@@ -45,7 +45,7 @@
                 if ($profile != null) {
 
                     // use profile viewer
-                    include_once("profile/ProfileViewer.php");
+                    include_once("core/ProfileViewer.php");
 
                 } else {
 
