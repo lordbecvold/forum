@@ -37,9 +37,7 @@ Becvold forum is a classic forum with a minimum of javascript designed overall f
 - [X] Highlight links in post (only for logged users)
 - [X] Post delete (for admin & post owner)
 - [X] Add loging actions (mysql log)
-- [ ] Test & fix CSS responsivity
-- [ ] Code clean
-- [ ] Penetration testing
+- [X] Code clean
 
 ## Dependencies
 This project requires PHP8 or < .

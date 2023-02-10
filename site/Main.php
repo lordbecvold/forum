@@ -35,34 +35,11 @@
 		}
 		///////////////////////////////////////////////////////////////////////
 
-		// get admin process (if used)
-		$adminProcess = $siteController->getQueryString("admin");
-
 		// get process value (if used)
 		$process = $siteController->getQueryString("process");
-
-		// check if admin process used
-		if ($adminProcess != null) {
-			
-			// check if user logged in
-			if ($userController->isUserLogged()) {
-
-				// check if user admin
-				if (($userController->getUserRoleByName($userController->getUserName()) == "Owner") || ($userController->getUserRoleByName($userController->getUserName()) == "Admin")) {
-
-					// use admin system component
-					include_once("admin/AdminMain.php");
-				} else {
-					header("location: ErrorHandlerer.php?code=403");
-				}
-			} else {
-				header("location: ErrorHandlerer.php?code=404");
-			}
-
-		} 
 		
 		// check if process used (login)
-		elseif ($process == "login") {
+		if ($process == "login") {
 
 			// use login component
 			include_once("components/auth/LoginComponent.php");

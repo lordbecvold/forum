@@ -76,7 +76,6 @@
 	
 	/////////////////////////////////////////////////////////////////////////////////////////////
 
-
 	// set default encoding
 	header('Content-type: text/html; charset='.$pageConfig->getValueByName('encoding'));
 
@@ -112,4 +111,3 @@
 		}
 	}
 ?>
-

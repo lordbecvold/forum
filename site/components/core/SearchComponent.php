@@ -45,8 +45,6 @@
 
             // end of posts list
             echo '</div>';
-
         }
     }
-
 ?>

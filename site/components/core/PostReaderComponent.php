@@ -226,6 +226,5 @@
             // end of post component
             echo '</div>';
         }
-
     }
 ?>
