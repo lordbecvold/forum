@@ -121,6 +121,18 @@ body {
 	color: rgb(252, 252, 46)
 }
 
+.post-action-button {
+	margin-right: 20px;
+	font-weight: bold;
+	text-decoration: none;
+	color: rgb(255, 69, 69);
+	font-size: 20px;
+}
+
+.post-action-button:hover {
+	color: rgb(41, 241, 41);
+}
+
 
 /* ALERT STYLE */
 .alert {

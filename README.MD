@@ -37,7 +37,7 @@ Becvold forum is a classic forum with a minimum of javascript designed overall f
 - [X] Profile page
 - [X] Search system (where post name)
 - [X] Highlight links in post (only for logged users)
-- [ ] Post delete (for admin & post owner)
+- [X] Post delete (for admin & post owner)
 - [ ] Post editor (for admin & post owner)
 - [ ] Ban/mute system
 - [ ] Add loging actions (mysql log)

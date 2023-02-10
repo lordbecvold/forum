@@ -132,5 +132,14 @@
             return $posts;
 
         }
+
+        // delete post where ID
+        public function deletePostByID($id) {
+
+            global $mysqlUtils;
+
+            // send delete posts query
+            $mysqlUtils->insertQuery("DELETE FROM posts WHERE id = '$id'");
+        }
     }
 ?>
