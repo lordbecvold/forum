@@ -651,6 +651,11 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 	color: rgb(182, 182, 182);
 }
 
+.search-list {
+	left: 0.5%;
+	margin-top: 1%;
+	width: 99% !important;
+}
 
 /* LARGE DESKTOPS CSS */
 @media only screen and (min-width: 2048px) {

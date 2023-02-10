@@ -118,5 +118,19 @@
             // return posts list
             return $posts;
         }
+
+        // get search posts
+        public function getSearchPosts($search) {
+
+            global $mysqlUtils;
+            global $pageConfig;
+
+            // get posts
+            $posts = mysqli_query($mysqlUtils->mysqlConnect($pageConfig->getValueByName("basedb")), "SELECT * FROM posts WHERE name LIKE '%$search%'");
+        
+            // return posts list
+            return $posts;
+
+        }
     }
 ?>
