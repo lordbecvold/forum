@@ -37,11 +37,10 @@ Becvold forum is a classic forum with a minimum of javascript designed overall f
 - [X] Profile page
 - [X] Search system (where post name)
 - [ ] Highlight links in post (only for logged users)
-- [ ] show image from image link (imgur, ctrlv.cz etc)
-- [ ] Post editor (for admin & post owner)
 - [ ] Post delete (for admin & post owner)
-- [ ] Add loging actions (mysql log)
+- [ ] Post editor (for admin & post owner)
 - [ ] Ban/mute system
+- [ ] Add loging actions (mysql log)
 - [ ] Test & fix CSS responsivity
 - [ ] Admin system (edit forum category, delete posts, delete comments, ban / mute / rank change for users)
 - [ ] CSS Colors in separate file (theme.css)
