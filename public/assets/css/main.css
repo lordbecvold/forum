@@ -549,12 +549,16 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 .comment {
 	border: 1px solid rgb(134, 134, 134);
 	padding: 10px;
-	margin-bottom: 20px;
-	background-color: rgb(41, 42, 43);
+	margin-bottom: 5px;
+	background-color: rgb(31, 32, 32);
+}
+
+.comment:hover {
+	background-color: rgb(36, 36, 36);
 }
 
 .comment-title {
-	border-bottom: 1px solid rgb(110, 110, 110);
+	border-bottom: 1px solid rgb(80, 80, 80);
 }
 
 .comment-date {
@@ -586,7 +590,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 	border: 1px solid rgb(134, 134, 134);
 	padding: 10px;
 	margin-bottom: 8px;
-	margin-top: 20px;
+	margin-top: 30px;
 	background-color: rgb(41, 42, 43);
 }
 
