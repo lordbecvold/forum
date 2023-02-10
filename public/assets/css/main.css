@@ -109,6 +109,18 @@ body {
 	text-align: center;
 }
 
+.link {
+	color: rgb(252, 252, 46);
+}
+
+.link:hover {
+	color: rgb(255, 69, 69);
+}
+
+.link-hide {
+	color: rgb(252, 252, 46)
+}
+
 
 /* ALERT STYLE */
 .alert {

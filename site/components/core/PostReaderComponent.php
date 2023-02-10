@@ -92,10 +92,24 @@
             </p>
         ';
 
+        // get post content
+        $content = nl2br($postData["content"]);
+
+        // check if user logged
+        if ($userController->isUserLogged()) {
+
+            // highlight url
+            $content = preg_replace("~[[:alpha:]]+://[^<>[:space:]]+[[:alnum:]/]~","<a class='link' target='blank_' href=\"\\0\">\\0</a>", $content);
+        } else {
+
+            // hide url
+            $content = preg_replace("~[[:alpha:]]+://[^<>[:space:]]+[[:alnum:]/]~","<span class='link-hide'>[HIDEN URL]</span>", $content);
+        }
+
         // add post content
         echo '
             <p class="post-content">
-                '.nl2br($postData["content"]).'
+                '.$content.'
             </p>
         ';
 
