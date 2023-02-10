@@ -507,9 +507,10 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 }
 
 .comment-box {
-	margin-top: 20px;
-	border: 1px solid rgb(179, 179, 179);
+	border-top: 1px solid rgb(134, 134, 134);
 	padding: 10px;
+	margin: -8px;
+	margin-top: 20px;
 	background-color: rgb(37, 39, 41);
 }
 
@@ -522,7 +523,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 }
 
 .comment {
-	border: 1px solid rgb(179, 179, 179);
+	border: 1px solid rgb(134, 134, 134);
 	padding: 10px;
 	margin-bottom: 20px;
 	background-color: rgb(41, 42, 43);
@@ -558,7 +559,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 }
 
 .comment-form {
-	border: 1px solid rgb(179, 179, 179);
+	border: 1px solid rgb(134, 134, 134);
 	padding: 10px;
 	margin-bottom: 8px;
 	margin-top: 20px;
@@ -810,5 +811,10 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 	.profile-posts-list {
 		width: 75%;
 		left: 25%;
+	}
+	.search-list {
+		left: 0.5%;
+		margin-top: 1%;
+		width: 99% !important;
 	}
 }
