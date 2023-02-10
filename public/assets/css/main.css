@@ -627,7 +627,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 
 .profile-posts-list {
 	border-top-right-radius: 8px;
-	width: 79%;
+	width: 80%;
 	position: relative;
 	left: 19.3%;
 	min-height: 40%;
@@ -798,5 +798,12 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 	}
 	.profile-role {
 		font-size: 11px;
+	}
+	.profile-data {
+		width: 25%;
+	}
+	.profile-posts-list {
+		width: 75%;
+		left: 25%;
 	}
 }

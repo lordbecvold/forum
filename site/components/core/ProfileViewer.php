@@ -9,6 +9,26 @@
     // get profile avatar
     $avatar = $userController->getUserAvatar($profile);
 
+    // get role color
+    if ($role == "Owner") {
+        $role = '<span class="color-red">'.$role.'</span>';
+
+    } elseif ($role == "Admin") {
+        $role = '<span class="color-red">'.$role.'</span>';
+
+    } elseif ($role == "Developer") {
+        $role = '<span class="color-blue">'.$role.'</span>';
+
+    } elseif ($role == "VIP") {
+        $role = '<span class="color-yellow">'.$role.'</span>';
+
+    } elseif ($role == "User") {
+        $role = '<span class="color-green">'.$role.'</span>';
+
+    } else {
+        $role = '<span>'.$role.'</span>';
+    }
+
     // print profile-box
     echo '<div class="profile-box">';
 
