@@ -44,7 +44,7 @@ This project requires PHP8 or < .
 * Adminer
    * Version: **4.8.1**
    * [Website](https://www.adminer.org/)
-* Whoops
+* Becwork
    * Becwork: **2.0**
    * [Github](https://github.com/lordbecvold/becwork)
 * Whoops
